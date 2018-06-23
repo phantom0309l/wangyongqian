@@ -2,7 +2,6 @@
 
 class AdminBaseAction extends BaseAction
 {
-
     protected $myauditor = null;
 
     protected $mydisease = null;

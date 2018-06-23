@@ -20,8 +20,14 @@ $dbExecuter = BeanFinder::get("DbExecuter");
 // 'xanswersheets', 'xanswers', 'xansweroptionrefs' );
 
 $entityNames = [
-    'Rpt_Week_Cancer_Doctor',
-    'Rpt_Day_Cancer_Doctor'
+    'Auditor',
+    'Patient',
+    'Doctor',
+    'Disease',
+    'Hospital',
+    'WxUser',
+    'Schedule',
+    'ScheduleTpl'
 ];
 
 $allTables = array();
