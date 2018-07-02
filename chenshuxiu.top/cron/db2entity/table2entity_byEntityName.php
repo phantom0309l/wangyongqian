@@ -5,8 +5,8 @@ ini_set("magic_quotes_sybase", 0);
 ini_set("magic_quotes_runtime", 0);
 ini_set('display_errors', 1);
 ini_set("memory_limit", "2048M");
-include_once (dirname(__FILE__) . "/../../sys/PathDefine.php");
-include_once (ROOT_TOP_PATH . "/cron/Assembly.php");
+include_once(dirname(__FILE__) . "/../../sys/PathDefine.php");
+include_once(ROOT_TOP_PATH . "/cron/Assembly.php");
 mb_internal_encoding("UTF-8");
 
 TheSystem::init(__FILE__);
@@ -20,14 +20,7 @@ $dbExecuter = BeanFinder::get("DbExecuter");
 // 'xanswersheets', 'xanswers', 'xansweroptionrefs' );
 
 $entityNames = [
-    'Auditor',
-    'Patient',
-    'Doctor',
-    'Disease',
-    'Hospital',
-    'WxUser',
-    'Schedule',
-    'ScheduleTpl'
+    'Order',
 ];
 
 $allTables = array();
@@ -47,8 +40,8 @@ foreach ($allTables as $entityName => $fields) {
 }
 
 // 导出表定义
-function table2array ($tableName) {
-    $dbExecuter = BeanFinder::get("DbExecuter", 'fcqxdb');
+function table2array($tableName) {
+    $dbExecuter = BeanFinder::get("DbExecuter", 'mainDB');
 
     // 提取字段
     $sql = "show full fields from `$tableName`";
@@ -59,7 +52,7 @@ function table2array ($tableName) {
 }
 
 // 将数组生成entity
-function array2entity ($entityName, $fields) {
+function array2entity($entityName, $fields) {
     // if(!in_array($tableName,array('groupon_edm_item','groupon_edm_rpt')))
     // {
     // return;
@@ -179,7 +172,7 @@ class _EntityName_ extends Entity
         $str_row .= "\n";
         $str_row .= ('    // $row["' . $field . '"] = $' . $field . ';');
 
-        $i ++;
+        $i++;
     }
 
     echo "\n";
@@ -202,7 +195,7 @@ class _EntityName_ extends Entity
     return $str;
 }
 
-function createDao ($entityName) {
+function createDao($entityName) {
     $str = '<?php
 /*
  * _EntityName_Dao
@@ -222,7 +215,7 @@ class _EntityName_Dao extends Dao
     return $str;
 }
 
-function createMgrAction ($entityName) {
+function createMgrAction($entityName) {
     $str = '<?php
 // _EntityName_MgrAction
 class _EntityName_MgrAction extends AuditBaseAction

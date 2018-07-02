@@ -1,0 +1,40 @@
+.sheet-question-box {
+	background: #f1f1f3;
+	padding: 10px;
+	margin: 10px 0;
+}
+
+.sheet-question-content {
+	font-style: italic; /*normal,italic,oblique*/
+}
+
+.sheet-question-tip {
+	font-style: italic;
+}
+
+.sheet-question-num {
+	width: 60px;
+	margin: 0 5px;
+}
+
+.sheet-question-star {
+	color: red;
+	font-size: 18px;
+}
+
+.sheet-question-unit {
+
+}
+
+.sheet-question-text {
+	width: 80%;
+}
+
+.sheet-question-textarea {
+	width: 80%;
+}
+
+.sheet-question-subit {
+	width: 200px;
+	line-height: 200%;
+}

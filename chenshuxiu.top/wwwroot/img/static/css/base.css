@@ -1,0 +1,22 @@
+em{ font-style: normal;}
+.red{ color:#f00;}
+.none{ display: none;}
+.tr{ text-align: right;}
+
+.active a{
+    color: #fff;
+    background-color: #428bca;
+}
+.patientDetails{
+    padding:5px; background: #f5f5f5; border: 1px solid #ccc; margin-bottom: 10px;
+}
+.patientDetails span{ margin:0px 5px; color:#333;}
+.tc{ text-align: center;}
+.fb{ font-weight: bold;}
+.ml5{ margin-left: 5px;}
+.mt20{ margin-top:20px;}
+.fl{ float:left;}
+.fr{ float:right;}
+.pr{ position:relative;}
+.pa{ position:absolute;}
+.gray{ color:#999;}

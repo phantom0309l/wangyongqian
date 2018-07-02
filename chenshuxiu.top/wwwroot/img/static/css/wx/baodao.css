@@ -1,0 +1,75 @@
+.none{
+    display: none;
+}
+
+.left-bar-blue{
+    padding-left: 10px;
+    border-left: 3px solid #2e61bc;
+    margin: 20px auto 20px 15px;
+    font-size: 16px;
+    color:#555;
+}
+.scheduleBox {
+    padding: 15px;
+    background: #f2f6ff ;
+    color: #555;
+    border-bottom: 1px solid #aaa;
+}
+
+.inputbox{
+    margin-left: 30px;
+    height: 30px;
+    border: 1px solid #2e61bc;
+    border-radius: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 60%;
+    color: #2e61bc;
+    font-size: 14px;
+}
+
+/*.readonly{*/
+    /*border: 1px solid #999;*/
+    /*color: #999;*/
+/*}*/
+
+.line{
+    border-bottom:  1px dotted #2e61bc;
+    width: 85%;
+    margin-left: 30px;
+    margin-top: 20px;
+}
+
+.sex_female{
+    margin-left: 30px;
+    display: inline-block;
+}
+
+
+.select-box{
+    margin-left: 30px;
+    width: 30%;
+    height: 30px;
+    border: 1px solid #2e61bc;
+    border-radius: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+    color: #2e61bc;
+    background-color: white;
+    font-size: 14px;
+}
+
+.blue-box{
+    width: 10px;
+    height: 10px;
+    border: 1px solid #2e61bc;
+    display: inline-block;
+}
+
+.blue-box-selected{
+    width: 6px;
+    height: 6px;
+    background-color: #2e61bc;
+    margin-top: 2px;
+    margin-left: 2px;
+}

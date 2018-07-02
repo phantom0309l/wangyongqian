@@ -18,7 +18,7 @@ $url = Config::getConfig("www_uri");
 
 $content = XHttpRequest::curl_getUrlContents($url);
 $keywords = array(
-    '方寸医生',
+    '王永前门诊手术预约',
     '免责声明');
 $result = true;
 

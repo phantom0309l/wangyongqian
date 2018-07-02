@@ -1,0 +1,62 @@
+.handleShell{ margin-top:20px;}
+.replyShell{ padding: 10px;}
+.reply-msg{ width:95%; height: 130px;}
+
+.actItem{ margin-bottom:20px; border: 1px solid #ddd;}
+.actItem-t{ height:40px; line-height:40px; padding-left: 20px; position: relative; cursor: pointer;}
+.actItem-title{ color: #337ab7; font-size: 16px;}
+.actItem-time{ color: #999; font-size: 12px; position: absolute; right:15px; }
+.actItem-c{ padding: 10px; border-top: 1px solid #ccc;}
+
+
+/*tab*/
+.tab-menu {
+    height: 30px;
+    border-bottom: 1px solid #ddd;
+    margin: 0px;
+    padding: 0px;
+}
+
+li {
+    margin: 0px;
+    padding: 0px;
+}
+
+.tab-menu li {
+    list-style: none;
+    float: left;
+    width: 97px;
+    height: 30px;
+    border: 1px solid #ddd;
+    line-height: 30px;
+    text-align: center;
+    margin-left: 5px;
+    background: #f5f5f5;
+    cursor: pointer;
+}
+
+.tab-menu li.active {
+    border-bottom: 1px solid #fff;
+    background: #fff;
+}
+.tab-content{ padding-top: 10px;}
+
+.pgroupBox{ padding: 10px 10px 5px; background: #f7f7f7; margin-bottom: 20px; border: 1px solid #ddd;}
+.pgroupBox a{ margin:0px 5px 5px 0px;}
+.pgroupselect{ width:95px; height:35px; border: 1px solid #ddd; background: #fff;}
+.textarea{ width:95%; height: 130px; border:1px solid #ddd;}
+.removePgroupBtn{}
+
+.remarkBox {
+    margin-bottom: 10px;
+}
+
+.remarkBox-ta {
+    width: 80%;
+    border: 1px solid #ccc;
+    padding: 5px;
+    background: #f5f5f5;
+    margin-bottom: 5px;
+}
+.isokBtn{ cursor: pointer;}
+.okBtnShell{ padding: 0px 0px 10px 10px;}

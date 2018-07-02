@@ -15,8 +15,8 @@ class MiPush
         Constants::setPackage($package);
         Constants::setSecret($secret);
 
-        $title = '方寸医生';
-        $desc = '您收到一条来自方寸医生的消息';
+        $title = '王永前门诊手术预约';
+        $desc = '您收到一条来自王永前门诊手术预约的消息';
         $payload = '{"diseaseid":' . $diseaseid . ',"patientid":' . $patientid . ',"patientname":' . $patientname . ',"pipeid":' . $pipeid . '}';
 
         // 推送设置参数

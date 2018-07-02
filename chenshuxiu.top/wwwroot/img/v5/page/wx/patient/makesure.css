@@ -1,0 +1,53 @@
+.none{display: none;}
+.bg{
+	/*display: block;*/
+	position: fixed;
+	opacity: 0.75;
+	z-index: 1110;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	text-align: center;
+	height: 100%;
+	background: #666;
+}
+.modal{
+	text-align: center;
+	z-index: 1111;
+	background: #fff;
+	position: fixed;
+	display: inline-block;
+	top: 30%;
+	left: 8%;
+	margin-top: 20px;
+	/*margin-left: 8%;*/
+	width: 82%;
+}
+.modal-txt{
+	margin: 15px 0;
+	font-size: 20px;
+
+}
+.modal-check{
+	border-top: 1px solid #ccc;
+}
+.modal-left{
+	float: left;
+	height: 44px;
+	line-height: 44px;
+	overflow: auto;
+	display: table;
+	width: 50%;
+	color: #09f;
+}
+.modal-right{
+	border-left: 1px solid #ccc;
+	float: right;
+	height: 44px;
+	line-height: 44px;
+	overflow: auto;
+	display: table;
+	width: 49%;
+	color: #09f;
+}

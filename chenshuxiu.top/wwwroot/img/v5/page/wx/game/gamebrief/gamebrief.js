@@ -1,0 +1,1 @@
+gamebrief.js

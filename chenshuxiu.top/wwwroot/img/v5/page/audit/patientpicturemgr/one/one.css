@@ -1,0 +1,15 @@
+.panel-base{
+    margin-top: 5px;
+    padding: 10px;
+    border: 1px solid #d5e2f6;
+    background: #f9fbff;
+    border-radius: 5px;
+}
+
+.sheet-base{
+    margin-top: 5px;
+    padding: 5px;
+    background: #fff;
+    border: 1px solid #d5e2f6;
+    border-radius: 5px;
+}

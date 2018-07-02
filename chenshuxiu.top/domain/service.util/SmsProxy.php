@@ -187,7 +187,7 @@ class SmsProxy
         $ret = false;
         $logMsg = "mobile: " . implode(",", $phone_list) . "; content: " . $content . "; ";
 
-        $content .= "【方寸医生】";
+        $content .= "【王永前门诊手术预约】";
         $statusCode = $client->sendSMS($phone_list, $content);
         $logMsg .= "status: " . $statusCode . "; ";
         if ($statusCode != null && $statusCode == "0") {
@@ -221,7 +221,7 @@ class SmsProxy
                     $phone_list = explode(",", $phone_list);
                 }
 
-                $content .= "【方寸医生】";
+                $content .= "【王永前门诊手术预约】";
                 $content = urlencode($content);
                 $phone_list = array_slice($phone_list, 0, 100);
                 $phone_list = implode(',', $phone_list);

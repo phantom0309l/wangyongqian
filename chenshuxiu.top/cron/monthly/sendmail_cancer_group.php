@@ -195,7 +195,7 @@ class Sendmail_cancer_group extends CronBase
         $mail->Username = 'product@fangcunyisheng.com'; // SMTP username 注意：普通邮件认证不需要加 @域名
         $mail->Password = 'Fcqx2015'; // SMTP password
 
-        $mail->SetFrom('product@fangcunyisheng.com', '方寸医生运营后台');
+        $mail->SetFrom('product@fangcunyisheng.com', '王永前门诊手术预约运营后台');
 
         $mail->CharSet = "UTF8";
         $mail->Encoding = "base64";

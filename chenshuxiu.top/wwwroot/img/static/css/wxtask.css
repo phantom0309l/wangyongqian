@@ -1,0 +1,66 @@
+body{ background: #f2f6f8; }
+input,textarea {-webkit-appearance:none;}
+p{ text-indent: 2pc;}
+.m15{ margin: 15px;}
+.gray{ color: #999;}
+.blue{ color: #61b2ef;}
+.green{ color: #93d758;}
+.bt{ border-top: 1px solid #d2dbe1;}
+.bb{ border-bottom: 1px solid #d2dbe1;}
+.box{ background: #fff; padding:15px;}
+.header{ height: 160px; background: url(http://img.fangcunyisheng.com/static/img/wxtask/banner.png) no-repeat; background-size:cover; position: relative;}
+.h-logo{ background:url(http://img.fangcunyisheng.com/static/img/wxtask/logo_ketang.png) no-repeat; width: 60px; height: 60px; display: block; background-size: 60px; border-radius: 30px; margin: 0px auto; position: relative; top:30px;}
+.h-title{ text-align: center; padding-top: 60px; color: #fff; font-size: 16px; display: block;}
+.h-actitle{ color: #fff; position: absolute; left:0px; bottom: 10px; height: 40px;}
+.h-actitle-l{ border-right: 2px solid #fff; height: 40px; font-size: 14px;}
+.h-actitle-l span{ font-size: 36px; line-height: 100%;}
+.h-actitle-r{ line-height: 100%;}
+.h-center{ text-align: center;}
+.imgbox{ margin: 15px auto;}
+.imgbox img{ width:32px; height: 32px; border-radius: 5px; float: left; margin: 0px 2px 2px;}
+.bigbtn{ width: 100%; height: 44px; line-height: 44px; text-align: center; border-radius: 5px; font-size: 16px; color: #fff; display:block; cursor:pointer;}
+.bigbtn-default{ background: #d2dbe1;}
+.bigbtn-active{ background: #55acee;}
+.bigbtn-not{ background: #ff6766;}
+
+.listbox{ background: #fff;}
+.listbox-t{ border-bottom: 1px solid #d2dbe1; font-size: 16px; font-weight: normal; height: 45px; line-height: 45px; padding-left: 15px; margin: 0px;}
+.listbox-item{ padding:8px 0px; margin: 0px 15px; border-bottom: 1px solid #d2dbe1; font-size: 12px;}
+.listbox-item-l{ float:left; width: 36px; height: 36px; border-radius: 18px; color: #fff; font-size: 18px; text-align: center; line-height: 36px; background:#d2dbe1;}
+.listbox-item-c{ margin-left: 8px; float: left;}
+.listbox-item-r{ float: right;}
+.listbox-item:last-child{ border-bottom: none;}
+.listbox-itemActive{ margin: 0px; padding: 8px 15px; background: #eef7fd;}
+.listbox-itemActive .listbox-item-l{ background: #61b2ef;}
+
+.alertBox{ 
+    width:290px; background: #fff; position:fixed; z-index:100; left:50%;
+    margin-left:-145px; border-radius:3px; display:none;
+}
+.alertBox-c{ text-align:center; }
+.alertBox-c p{ color: #55acee; font-size:14px; margin:25px 0px 15px; }
+.goBtn{ display:block; font-size:16px; color:#fff; width:70%; height:40px; border-radius:3px; line-height:40px; margin:0px auto 20px; cursor:pointer; background:#55acee; }
+.alertBox-close{ height:38px; line-height:38px; border-top:1px solid #eee; color:#999; font-size:12px; text-align:center; cursor:pointer;}
+.bgShell{ position:absolute; width:100%; height:100%; left:0px; top: 0px; background:#ddd; opacity: 0.6; z-index:99; display:none;}
+
+.goTopicShell{ 
+    position:fixed; left:0px; bottom:0px; background:#333; opacity:0.9;
+    width:100%; height:45px;
+}
+.goTopicBtn{ 
+    color:#fff; font-size:14px; text-align:center; display:block; height:21px; line-height:21px; position:relative; top:12px;
+}
+.goTopicBtn-l{ width:49%; float:left; }
+.goTopicBtn-l span{ background:url(http://img.fangcunyisheng.com/static/img/wxtask/showicon.png) no-repeat left center; padding-left:20px; background-size:15px; }
+.goTopicBtn-r{ width:49%; float:right; border-left:1px solid #000; }
+.goTopicBtn-r span{ background:url(http://img.fangcunyisheng.com/static/img/wxtask/writeicon.png) no-repeat left center; padding-left:20px; background-size:15px; }
+.topbar{
+    height:40px; line-height:40px; background:#55acee; color:#fff; text-align:center; font-size:16px;  width:100%; 
+}
+.vcard{ padding:10px 0px 20px;}
+.vcard-item{ float:left; margin:5px; border:1px solid #ddd; border-radius:5px; background:#f5f5f5; position:relative;}
+.vcard-txt{ position:absolute; width:50px; height:16px; left:50%; top:50%; margin:-8px 0px 0px -25px; font-size:14px; color:#999; text-align:center;}
+.pr{ position:relative;}
+.showMoreV{ position:absolute; right:10px; top:1px; font-size:14px; font-weight:normal; color:#55acee;}
+
+.bigImg{ position:fixed; z-index:100; width:95%; display:none; left:0px; top:0px;}

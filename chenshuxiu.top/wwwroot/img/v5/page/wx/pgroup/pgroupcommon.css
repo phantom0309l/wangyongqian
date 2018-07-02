@@ -1,0 +1,79 @@
+.item {
+    padding: 10px 0px;
+    margin-top: 10px;
+    border-bottom: 1px dashed #ccc;
+    height: auto;
+    padding-bottom: 10px;
+    position: relative;
+
+}
+
+.item-l {
+    float: left;
+    width: 30%;
+}
+
+.course-img {
+    width: auto;
+}
+
+.item-r {
+    /*position: relative;*/
+    margin-bottom: 5px;
+    float: right;
+    width: 70%;
+    height: auto;
+}
+
+.title-doc {
+    float: left;
+    width: 60%;
+}
+
+.effective {
+    float: right;
+    width: 20%;
+    color: red;
+    font-size: 14px;
+}
+
+.effective-doc {
+    float: right;
+    /*position: absolute;*/
+    color: #666;
+    margin-top: 5px;
+    right: 0px;
+    font-size: 12px;
+}
+
+.item-r-b {
+    /*position: absolute;*/
+    width: 100%;
+    margin-top: 20px;
+    clear: both;
+    /*bottom: 5px;*/
+
+}
+
+.pick {
+    float: right;
+}
+
+.tuzhang{
+    position: absolute;
+    z-index:100;
+    right: 0px;
+    top:10px;
+    width: 70px;
+    height: 30px;
+    border: 2px solid #F8594B;
+    background: transparent;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 26px;
+    color: #F8594B;
+    border-radius: 10px;
+    transform:rotate(30deg);
+    -webkit-transform:rotate(30deg);
+}

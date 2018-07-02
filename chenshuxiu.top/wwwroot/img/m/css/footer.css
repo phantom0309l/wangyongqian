@@ -1,0 +1,57 @@
+#footer ul {
+    background-color: #fff;
+}
+#footer li {
+    height: 56px;
+}
+#footer a {
+    background-color: #fff;
+    color: #9d9d9d;
+    padding-left: 0;
+    padding-right: 0;
+    margin: 0 auto;
+    border: none;
+    width:34px;
+    height: 38px;
+    line-height: 72px;
+    font-weight: lighter;
+}
+
+#footer .tuijianicon {
+    background: url(/m/img/icon1.png) no-repeat;
+    background-size: 65px;
+    background-position: -32px 8px;
+}
+
+#footer .faxianicon {
+    background: url(/m/img/icon2.png) no-repeat;
+    background-size: 65px;
+    background-position: -32px 8px;
+}
+
+#footer .zhoubianicon {
+    background: url(/m/img/icon.png) no-repeat;
+    background-size: 60px;
+    background-position: 2px -4px;
+    position: relative;
+    top: -15px;
+    height: 68px;
+    width: 64px;
+}
+
+#footer .teseicon {
+    background: url(/m/img/icon3.png) no-repeat;
+    background-size: 65px;
+    background-position: -32px 8px;
+}
+
+#footer .myicon {
+    background: url(/m/img/icon4.png) no-repeat;
+    background-size: 65px;
+    background-position: -32px 8px;
+}
+
+#footer .active {
+    background-position: 0px 8px;
+    color: #40d7bc;
+}

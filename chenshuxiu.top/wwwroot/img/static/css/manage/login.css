@@ -1,0 +1,201 @@
+#accblock #accbody {
+  vertical-align: center;
+  line-height: 20px;
+  width: 540px;
+  height: auto;
+  padding-bottom: 27px;
+  position: fixed;
+  top: 10%;
+  border-radius: 4px; }
+  #accblock #accbody p, #accblock #accbody div {
+    width: 540px;
+    margin: 0px; }
+  #accblock #accbody .closeAtom {
+    position: absolute;
+    right: 7px;
+    top: 7px;
+    color: #999;
+    transition: color 0.3s; }
+    #accblock #accbody .closeAtom:hover {
+      color: #333; }
+  #accblock #accbody #accheader {
+    margin-top: 33px;
+    line-height: 48px;
+    height: 48px;
+    text-align: center; }
+    #accblock #accbody #accheader b {
+      font-weight: bold;
+      color: #999; }
+    #accblock #accbody #accheader a {
+      color: #999;
+      transition: color 0.3s;
+      font-weight: bold;
+      letter-spacing: 3px; }
+      #accblock #accbody #accheader a:hover {
+        color: #333; }
+    #accblock #accbody #accheader .lr_act {
+      color: #333;
+      cursor: default; }
+  #accblock #accbody #oauth_log {
+    width: 300px;
+    margin-left: 130px;
+    height: auto;
+    margin-top: 27px; }
+    #accblock #accbody #oauth_log #soc_platform {
+      width: 300px;
+      height: auto;
+      border-top: 1px solid #eee;
+      position: relative;
+      font-size: 14px;
+      text-align: center; }
+      #accblock #accbody #oauth_log #soc_platform span {
+        position: relative;
+        display: inline-block;
+        color: #999;
+        text-align: center;
+        margin-top: 21px; }
+    #accblock #accbody #oauth_log .sc_pltfms {
+      height: 45px;
+      margin-top: 15px;
+      text-align: center;
+      width: 100%;
+      position: relative; }
+      #accblock #accbody #oauth_log .sc_pltfms .pltfm_logo {
+        display: inline-block;
+        height: 45px;
+        width: 45px;
+        line-height: 45px;
+        border-radius: 23px;
+        background: #eee;
+        color: #555; }
+        #accblock #accbody #oauth_log .sc_pltfms .pltfm_logo:hover {
+          color: white; }
+      #accblock #accbody #oauth_log .sc_pltfms #weibo_log_btn:hover {
+        background: #FA7D3C; }
+      #accblock #accbody #oauth_log .sc_pltfms #qq_log_btn:hover {
+        background: #12B7F5; }
+      #accblock #accbody #oauth_log .sc_pltfms #weixin_log_btn:hover {
+        background: #609700; }
+  #accblock #accbody .acc_infob {
+    width: 300px;
+    margin-left: 130px;
+    margin-top: 27px;
+    height: auto;
+    padding-bottom: 12px; }
+    #accblock #accbody .acc_infob .err_msg, #accblock #accbody .acc_infob .suc_msg {
+      background: #EE5F5B;
+      height: 36px;
+      color: white;
+      width: 100%;
+      line-height: 36px;
+      text-align: center;
+      font-size: 14px; }
+    #accblock #accbody .acc_infob .suc_msg {
+      background: #39c; }
+    #accblock #accbody .acc_infob button {
+      cursor: pointer;
+      display: block;
+      transition: background 0.3s;
+      color: white;
+      border-radius: 2px;
+      border: none;
+      font-size: 18px;
+      letter-spacing: 6px;
+      outline: none; }
+      #accblock #accbody .acc_infob button:focus {
+        -moz-outline-style: none; }
+    #accblock #accbody .acc_infob .bsub_btn {
+      width: 300px;
+      height: 51px;
+      background: #f60; }
+      #accblock #accbody .acc_infob .bsub_btn:hover {
+        background: #f90; }
+    #accblock #accbody .acc_infob .lsub_btn {
+      float: right;
+      width: 108px;
+      height: 45px; }
+    #accblock #accbody .acc_infob #login_btn {
+      background: #39c; }
+      #accblock #accbody .acc_infob #login_btn:hover {
+        background: #3cf; }
+      #accblock #accbody .acc_infob #login_btn:active {
+        background: #39f; }
+    #accblock #accbody .acc_infob .regvrf_btn {
+      background: #f60; }
+      #accblock #accbody .acc_infob .regvrf_btn:hover {
+        background: #f90; }
+      #accblock #accbody .acc_infob .regvrf_btn:active {
+        background: #f63; }
+    #accblock #accbody .acc_infob .deregvrf_btn {
+      background: #ccc;
+      color: #999; }
+    #accblock #accbody .acc_infob p {
+      width: 100%;
+      margin-bottom: 15px; }
+    #accblock #accbody .acc_infob .aopr_cmnt {
+      color: #777;
+      font-size: 14px; }
+    #accblock #accbody .acc_infob .acinfo_ipt {
+      height: 43px;
+      border-radius: 4px;
+      position: relative; }
+      #accblock #accbody .acc_infob .acinfo_ipt span {
+        display: inline-block;
+        width: 44px;
+        line-height: 43px;
+        text-align: center;
+        border: 1px solid #ccc;
+        border-right: none;
+        color: #777;
+        border-radius: 4px 0px 0px 4px;
+        font-size: 15px; }
+      #accblock #accbody .acc_infob .acinfo_ipt input {
+        display: inline-block;
+        width: calc(100% - 44px);
+        height: 45px;
+        line-height: 43px;
+        position: absolute;
+        top: 0px;
+        left: 44px;
+        padding: 0px 12px;
+        font-size: 14px;
+        box-sizing: border-box;
+        border: 1px solid #ccc;
+        border-radius: 0px 4px 4px 0px;
+        transition: border 0.3s; }
+        #accblock #accbody .acc_infob .acinfo_ipt input:focus {
+          border: 1px solid #f90; }
+    #accblock #accbody .acc_infob .aipt_btn {
+      position: relative;
+      height: 45px;
+      width: 300px; }
+      #accblock #accbody .acc_infob .aipt_btn input {
+        width: 180px;
+        height: 45px;
+        display: inline-block;
+        line-height: 43px;
+        position: absolute;
+        padding: 0px 12px;
+        font-size: 14px;
+        box-sizing: border-box;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        float: left;
+        transition: border 0.3s; }
+        #accblock #accbody .acc_infob .aipt_btn input:focus {
+          border: 1px solid #f90; }
+    #accblock #accbody .acc_infob .ac_opr {
+      height: 14px;
+      margin-bottom: 12px; }
+      #accblock #accbody .acc_infob .ac_opr #fgt_psword {
+        display: inline-block;
+        float: right;
+        color: #999;
+        font-size: 14px;
+        line-height: 14px;
+        margin-top: -6px;
+        transition: color 0.3s; }
+        #accblock #accbody .acc_infob .ac_opr #fgt_psword:hover {
+          color: #333; }
+
+/*# sourceMappingURL=login.css.map */

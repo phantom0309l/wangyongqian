@@ -1,0 +1,47 @@
+* {
+  margin: 0px;
+  padding: 0px; }
+
+li {
+  list-style-type: none; }
+
+body {
+  font-family: "Segoe UI",Arial,Helvetica,"Microsoft Jhenghei","Hiragino Sans GB","WenQuanYi Zen Hei","Microsoft Yahei",STHeiti,"WenQuanYi Micro Hei",times, sans-serif; }
+
+a {
+  text-decoration: none; }
+  a:hover, a:active, a:focus {
+    outline: medium none;
+    cursor: pointer; }
+
+.center {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto; }
+
+/*.ms-controller {
+ visibility: hidden; }
+*/
+.bgblock {
+  position: fixed;
+  z-index: 999;
+  top: 0px;
+  width: 100%;
+  height: 100%; }
+
+.blockbody {
+  overflow: hidden;
+  background: white;
+  top: 10%;
+  border: 1px solid #ccc;
+  position: relative;
+  box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.3); }
+
+.blockheader a {
+  display: block;
+  height: 48px;
+  line-height: 48px;
+  position: absolute;
+  color: #555;
+  font-size: 13px;
+  top: 0px; }

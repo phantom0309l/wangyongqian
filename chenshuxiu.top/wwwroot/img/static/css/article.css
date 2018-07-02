@@ -1,0 +1,22 @@
+/* ab表示article background */
+
+
+.ab-red{color: #f66}
+.ab-blue{color: #36f}
+.ab-orange{color: #f93}
+.ab-grey{color: #cccccc}
+.ab-bold{font-weight: bold}
+.ab-12{font-size: 12px}
+.ab-16{font-size: 16px}
+.ab-18{font-size: 18px}
+.ab-20{font-size: 20px}
+
+.ab-box{ background:#f7f7f7; border:1px solid #ddd; border-radius:3px; padding:8px; font-size:14px; line-height:180%;}
+.article-table{
+    border-collapse: collapse;
+    border:1px solid #ddd;
+    font-size: 13px;
+    width:100%;
+}
+.article-table td{ border: 1px solid #ddd; padding:4px 0px 4px 4px;}
+.article-table th{ padding:6px;}

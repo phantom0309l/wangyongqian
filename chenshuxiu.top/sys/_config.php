@@ -141,7 +141,7 @@ foreach ($subsys_arr as $subsys) {
 $config['wx_uri'] = "http://wx.{$domain}";
 
 // 都用线上的图片库
-$config['photo_uri'] = "https://photo.{$domain}";
+$config['photo_uri'] = "http://photo.{$domain}";
 $config['upload_uri'] = "http://123.56.0.27/upload";
 
 // 图片存储本地路径

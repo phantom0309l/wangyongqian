@@ -1,0 +1,291 @@
+/*通用类*/
+.mt100 {
+    margin-top: 100px;
+}
+
+/*顶部 auditor tab   开始*/
+.topMenu-list {
+    width: 100%;
+    padding-left: 3%;
+    padding-right: 3%;
+}
+
+.auditor-item {
+    width: 100px;
+    height: 53px;
+    line-height: 60px;
+    font-weight: 400;
+    text-align: center;
+}
+
+.auditor-item:hover, .active-item, .onepatient-tab .avtive {
+    background-color: #5c90d2;
+    color: #fff;
+    border-radio: 3px;
+    cursor: pointer;
+}
+
+.auditor-item i {
+    font-size: 20px;
+    line-height: 53px;
+}
+
+/*顶部 auditor tab   结束*/
+
+/*工作效率统计  开始*/
+.content-box {
+    margin-top: 40px;
+}
+
+.we-time-label {
+    height: 34px;
+    line-height: 34px;
+    color: #5c90d2;
+}
+
+.we-top, .wq-top {
+    padding-bottom: 10px;
+    width: 100%;
+}
+
+.we-content, .wq-content {
+    margin-top: 30px;
+}
+
+.we-content ul, .we-content li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.we-content-item {
+    padding: 0;
+}
+
+.we-content-item .item-title {
+    display: block;
+    height: 30px;
+    line-height: 30px;
+    font-size: 18px;
+    text-align: center;
+    background-color: #5c90d2;
+    color: #fff;
+}
+
+.border-lr {
+    border-left: 1px solid rgba(200, 200, 200, 1);
+    border-right: 1px solid rgba(200, 200, 200, 1);
+}
+
+/*工作效率统计 content*/
+.we-content-item .item-content {
+    text-align: center;
+}
+
+.we-content-item ul li span, .we-content-item p span {
+    color: #FF6600;
+}
+
+.item-content {
+    margin-top: 50px;
+    padding-bottom: 50px;
+}
+
+.item-content li {
+    margin-bottom: 15px;
+}
+
+.fr .form-group {
+    width: 500px;
+}
+
+.optask_list, .cdrmeeting_out_list {
+    width: 100%;
+    height: 800px;
+    margin-top: 50px;
+    display: none;
+}
+
+.cdrmeeting_out_list {
+    height: 620px;
+}
+
+.item-title i {
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+.time-box {
+    border: 1px solid #5c90d2;
+    border-radius: 3px;
+    height: 40px;
+    padding: 0;
+}
+
+.time-box i {
+    margin-top: 5px;
+    color: #5c90d2;
+}
+
+.we-time-slot {
+    border: none;
+    color: #5c90d2;
+    background-color: #fff;
+!important;
+    width: 80%;
+    display: inline-block;
+    vertical-align: top;
+}
+
+/* 工作质量统计  */
+.wq-bar-box {
+    width: 80%;
+    height: 300px;
+    margin: 0 auto;
+}
+
+#wq-time {
+    border: none;
+    background-color: #fff;
+    width: 80%;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.time-spot {
+    border: 1px solid #5c90d2;
+    border-radius: 3px;
+}
+
+.time-spot input {
+    color: #5c90d2;
+}
+
+.time-spot i {
+    margin-top: 5px;
+    color: #5c90d2;
+}
+
+.check-item {
+    border: 1px solid #ccc;
+    background-color: #f7f7f7;
+    border-radius: 3px;
+    margin: 10px;
+    height: 110px;
+    width: 110px;
+    display: inline-block;
+    text-align: center;
+    padding-top: 20px;
+    vertical-align: bottom;
+!important;
+}
+
+.check-item-active {
+    background-color: #70b9eb;
+    color: #fff;
+    border-color: #5c90d2;
+}
+
+.check-item i {
+    position: absolute;
+    top: -20px;
+    left: 65px;
+    color: #3675c5;
+}
+
+.check-item-active i {
+    position: absolute;
+    top: -20px;
+    left: 65px;
+    color: #fff;
+}
+
+.check-item .optask-t {
+    min-height: 40px;
+    line-height: 40px;
+    min-width: 450px;
+    cursor: pointer;
+    border: 1px solid #5c90d2;
+    background-color: #fff;
+    display: none;
+    position: relative;
+    z-index: 9;
+    text-align: left;
+    padding: 10px;
+    left: 35px;
+    color: #333;
+    border-radius: 3px;
+}
+
+.check-item .optask-t i {
+    position: absolute;
+    top: -10px;
+    left: 415px;
+    color: #3675c5;
+}
+
+/* 测评卷部分 */
+.check-content {
+    margin: 50px 20px;
+    padding: 20px;
+}
+
+.time_before, .time_after {
+    height: 300px;
+    line-height: 300px;
+    font-size: 50px;
+    font-weight: 900;
+    color: #3675c5
+}
+
+.time_before {
+    text-align: right;
+}
+
+.time_after {
+    text-align: left;
+}
+
+.question-list {
+    margin: 50px;
+}
+
+.question-list .sheet-question-content {
+    display: inline-block;
+    width: 30%;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.question-list .question-item {
+    margin: 5px 0;
+}
+
+.sheet-question-box {
+    background-color: #fff;
+}
+
+.question-list .question-textarea-box .sheet-question-content {
+    float: left;
+    width: 20%;
+    height: 80px;
+    line-height: 80px;
+}
+
+.question-list .question-textarea-box textarea {
+    height: 80px;
+    float: left;
+}
+
+.question-list .question-textarea-box .sheet-question-box>div>span {
+    display: none;
+}
+
+.question-list .my-btn-submit {
+    height: 80px;
+    line-height: 60px;
+    vertical-align: bottom;
+    margin-top: 30px;
+}

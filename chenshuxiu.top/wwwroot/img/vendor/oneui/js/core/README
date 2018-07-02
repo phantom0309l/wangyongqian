@@ -1,0 +1,2 @@
+请合并零碎js至bundle 以提高浏览器加载速度, 勿直接引用
+cat some.js >> jquery.bundle.min.js

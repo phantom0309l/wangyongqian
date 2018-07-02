@@ -1,1 +1,0 @@
-<div>加入课程:<?= $a->obj->course->title ?></div>

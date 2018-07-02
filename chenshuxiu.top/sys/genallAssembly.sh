@@ -7,3 +7,6 @@ php ${assembly_path}generatorAssembly.admin.php
 
 echo "\n\nphp ${assembly_path}generatorAssembly.cron.php"
 php ${assembly_path}generatorAssembly.cron.php
+
+echo "\n\nphp ${assembly_path}generatorAssembly.wx.php"
+php ${assembly_path}generatorAssembly.wx.php

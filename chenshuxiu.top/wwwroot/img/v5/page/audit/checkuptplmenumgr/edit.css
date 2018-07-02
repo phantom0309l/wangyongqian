@@ -1,0 +1,59 @@
+#menus {
+    margin: 0;
+}
+
+.menu-item {
+    -webkit-transition: all 0.15s ease-out;
+    transition: all 0.15s ease-out;
+    display: inline-block;
+    padding: 10px 0;
+    margin-bottom: 0;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 2px;
+}
+
+.select2-container .select2-selection--single {
+    height: 36px !important;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+    line-height: 36px !important;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__arrow {
+    height: 30px !important;
+}
+
+.nav-main ul {
+    background-color: rgba(176, 196, 222, 0.2) !important;
+    margin-left: 50px;
+    padding: 0 15px;
+}
+
+.nav-main li.open {
+    background: none !important;
+}
+
+.js-select2-parent, .js-select2-sub {
+    width: 250px;
+}
+
+.menu-parent-name {
+    display: inline-block;
+    width: 150px;
+    height: 36px;
+    margin-left: 2px;
+    vertical-align: middle;
+}

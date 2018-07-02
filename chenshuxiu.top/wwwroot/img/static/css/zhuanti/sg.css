@@ -1,0 +1,175 @@
+body{ font-size:16px; color:#333; background-color:#fbfcf7;}
+div,span,ul,li,a,p,h1,body,header,section,footer,dl,dt,dd{ margin:0px; padding:0px;}
+li {list-style: none;}
+input, textarea{ font-size:16px;ime-mode: disabled;}
+.none {	display: none;}
+.fl {float: left;}
+.t2 { text-indent: 2em;}
+.tc{ text-align: center}
+.pa{ position:absolute;}
+.mt30{ margin-top:30px;}
+.ml20{ margin-left:20px;}
+.p20{ padding:20px;}
+.pl45{ padding-left:45px;}
+.clearfix:after{content:".";display:block;height:0;clear:both;visibility:hidden;}
+.clearfix{display:inline-block;}
+* html .clearfix{height:1%;}
+.clearfix{display:block;}
+html {
+    width: 100%;
+    min-width: 300px;
+    height: 100%;
+    overflow: hidden
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    max-width: 640px;
+    min-height: 410px;
+    margin: 0 auto;
+    font-size: inherit;
+    -webkit-font-smoothing: antialiased;
+    background: #feee7f;
+    overflow: hidden;
+    position: relative;
+    -webkit-tap-highlight-color: transparent;
+}
+    .blk {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    -webkit-transition: all .5s ease;
+    transition: all .5s ease;
+    box-sizing: border-box
+    }
+    .step1 {
+    z-index: 10;
+    background: #feee7f;
+    }
+.step1{
+    background: -webkit-linear-gradient(top, #feee7f, #feee7e);
+}
+.sumShell{ 
+    position:absolute; bottom:5px; font-size:14px; color:#ff6766;
+    -webkit-transform: translate3d(-50%,0,0);
+    transform: translate3d(-50%,0,0);
+    left: 50%;
+
+}
+.sum{ font-weight:bold;}
+
+.sgRule{ width:70%; margin-top:10px;}
+.ruleTitle{ font-size:22px; color:#ff6766; margin:15px 0px 10px;}
+.ruleContent{ width:200px; font-size:16px; color:#d1964d; line-height:150%;}
+.ruleContent-t{ font-size:24px; line-height:150%; }
+
+.begin-btn {
+    color: #fff;
+    border: 0;
+    background: #ff6766;
+    padding: 10px 60px;
+    border-radius: 3px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.replay-btn{ 
+}
+.msgBtn{ 
+}
+.replay-btn img{ 
+    width:45%;
+}
+.msgBtn img{ 
+    width:45%;
+}
+.msgBtn-num{
+    position:absolute; right:3px; top:3px;
+    width:14px; height:14px; border-radius:7px; font-size:12px;
+    background:#fff; line-height:14px;
+    color:#f00;
+}
+
+.sgResult{
+    width:267px; height:117px; margin:60px auto 0px; line-height:117px;
+    background-image: url(http://img.fangcunyisheng.com/static/img/zhuanti/sg_07.png);
+    background-repeat:no-repeat;
+    background-size:267px;
+    font-size:36px; color:#E43A39; text-align:center;
+    text-shadow:1px 1px 1px #fff;
+}
+.resultContent{ font-size:18px; color:#a45b4a; text-align:justify; line-height:170%; margin:20px 0px;}
+.scorenum{ font-size:32px; font-weight:bold;}
+.scorenum1{ color:#ff6766;}
+.scorenum2{ color:#f70;}
+
+.shareTop{
+    width:90%; padding:5px;
+    box-sizing: border-box;
+    border-radius:5px;
+    background:#d19651;
+    margin:30px auto 0px;
+    font-size:16px; color:#fff;
+    position:relative;
+}
+.shareTopInner{
+    padding:25px 10px; line-height:160%; border:1px dashed #fff; border-radius:5px;
+    box-sizing: border-box; text-align:justify;
+}
+.head{ width:60px; height:60px; border-radius:34px; border:4px solid #fff; position:absolute; left:-20px; top:-40px;background-size:60px; background-repeat:no-repeat;}
+.nickname, .time{ color:#E43A39; font-size:22px;}
+.pkbtn{
+    display:inline-block; width:179px; height:46px;
+    background-image: url(http://img.fangcunyisheng.com/static/img/zhuanti/sg_09.png);
+    background-repeat:no-repeat;
+    background-size:179px;
+}
+
+.topMenu{ margin:30px 0px 10px;}
+.topMenu dt{ font-size:22px; color:#ff6766; padding-bottom:10px;}
+.topMenu-list{ 
+        display:inline-block; padding:10px 35px; 
+        background:#f3da74; border-radius:5px;
+        color:#a45b4a; cursor:pointer; 
+}
+.active{ color:#fff; background:#d1964d;}
+
+
+.toplist dt{ font-size:22px; color:#ff6766; padding-bottom:10px;}
+.toplist dt span{ font-size:14px; color:#ff6766;}
+.toplist-item{ padding:5px 10px; border-bottom:1px dashed #ff6766;}
+.toplist-item-l{ float:left; border:2px solid #fff; width:60px; height:60px; border-radius:32px; background-size:60px; background-repeat:no-repeat;}
+.toplist-item-r{ float:right;}
+.toplist-headimg{ width:60px;  border-radius:30px;}
+.toplist-nickname{ text-align:left; font-size:14px; color:#a45b4a; padding-top: 15px;}
+.toplist-toptime{ float:right; font-size:18px; color:#ff6766;}
+
+.toptimeBox{
+    width:90%; height:45px; line-height:45px; text-align:center;
+    color:#fff; background:#5ba33e; font-size:18px;
+    margin:20px auto; position:relative;
+    border-radius:5px;
+}
+.toptimeBar{ 
+    width:100%; height:50px; color:#a45b4a; font-size:16px;
+    background:#f3da74;
+    position:fixed; left:0px; top:0px; z-index:103
+}
+.toptime-head{ width:44px; height:44px; border-radius:23px; border:1px solid #fff; position:absolute; left:15px; top:2px;background-size:44px; background-repeat:no-repeat;}
+.toptime-c{ text-align:center; line-height:50px;  }
+.toptime-c span{ font-size:20px; font-weight:bold; }
+.toptime-tip{ position:absolute; right:15px; top:10px; height:30px;}
+
+
+.sg_01{ background: url(http://img.fangcunyisheng.com/static/img/zhuanti/sg_01.png); position: absolute;}
+.sg_02{ background: url(http://img.fangcunyisheng.com/static/img/zhuanti/sg_02.png); position: absolute;}
+.sg_03{ background: url(http://img.fangcunyisheng.com/static/img/zhuanti/sg_03.png); position: absolute;}
+.sg_04{ background: url(http://img.fangcunyisheng.com/static/img/zhuanti/sg_04.png); position: absolute;}
+.sg_02, .sg_03,.sg_04{ opacity:0;}
+
+.prevLoad .container{ opacity: 0;}
+.prevLoad .loading{ display: block; position: absolute; left: 50%; top:50%; margin:-11px 0px 0px -11px; width:22px;}
+.loading{ display: none;}

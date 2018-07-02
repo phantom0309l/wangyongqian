@@ -1,0 +1,319 @@
+#chartShell {
+    width: 100%;
+    /* height: 800px; */
+    overflow: auto;
+}
+
+.trOnSeleted {
+    background-color: #e6e6fa !important;
+}
+
+.trOnMouseOver {
+    background-color: #e6e6fa;
+}
+
+#goTop {
+    position: fixed;
+    bottom: 20px;
+    width: 40px;
+    height: 40px;
+    background: #ddd;
+    padding: 5px 10px;
+}
+
+.pipeeventBox {
+    position: absolute;
+    width: 400px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    right: 0px;
+    z-index: 10;
+    background: #fff;
+}
+
+#pipeShell {
+    padding-bottom: 30px;
+}
+
+#answersheet {
+    z-index: 100
+}
+
+/*tab*/
+.tab-menu {
+    height: 30px;
+    border-bottom: 1px solid #ddd;
+    margin: 0px;
+    padding: 0px;
+}
+
+li {
+    margin: 0px;
+    padding: 0px;
+}
+
+.tab-menu li {
+    list-style: none;
+    float: left;
+    width: auto;
+    min-width: 90px;
+    height: 30px;
+    padding: 0 5px;
+    border: 1px solid #ddd;
+    line-height: 30px;
+    text-align: center;
+    margin-left: 5px;
+    background: #f5f5f5;
+    cursor: pointer;
+}
+.tab-menuAuto li {
+    list-style: none;
+    float: left;
+    width: auto;
+    height: 30px;
+    border: 1px solid #ddd;
+    line-height: 30px;
+    text-align: center;
+    margin-left: 5px;
+    background: #f5f5f5;
+    cursor: pointer;
+    padding: 0px 12px;
+}
+
+.tab-menu li.active {
+    border-bottom: 1px solid #fff;
+    background: #fff;
+}
+
+.mt10 {
+    margin-top: 10px;
+}
+
+.mb10 {
+    margin-bottom: 10px;
+}
+
+.ml10 {
+    margin-left: 10px;
+}
+
+.remarkEventBox {
+    margin-bottom: 10px;
+}
+
+.remarkEventBox-ta {
+    width: 80%;
+    border: 1px solid #ccc;
+    padding: 5px;
+    background: #fff;
+    margin-bottom: 5px;
+}
+
+.contentBoxTitle {
+    border-top: 1px solid #5c90d2;
+    padding: 5px 10px 8px 10px;
+    background: #eeeeee;
+    margin-top: 10px;
+}
+
+.contentBoxBox1 {
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    padding: 10px;
+}
+
+.colorBox {
+    margin: 5px 0px;
+    padding: 10px;
+    /*background: #E6E6FA;*/
+}
+
+.colorBox-paper {
+    background: #f9f9f9;
+}
+
+.bgEEE {
+    background: #EEE;
+}
+
+.bgFFF{
+    background: #FFF;
+}
+
+.pgroupBox {
+    margin: 5px 0px;
+    padding: 10px 10px 5px;
+    background: #E6E6FA;
+}
+
+.pgroupBox button {
+    margin: 0px 5px 5px 0px;
+}
+
+.grayBgColorBox {
+    margin: 5px 0px;
+    padding: 10px;
+    background: #f9f9f9;
+}
+
+@media ( max-width: 600px) {
+    .col-md-12, .col-md-6 {
+        padding-left: 3px;
+        padding-right: 3px;
+    }
+
+    .pipeeventTrigger {
+        display: none;
+    }
+}
+
+.showRemarkBox {
+    background: #fff;
+    padding: 8px 10px;
+    border: 1px solid blue;
+    z-index: 10;
+    width: 400px;
+    border-radius: 3px;
+    left: 55px;
+    top: 3px;
+}
+
+.imgBrief img {
+    width: 100%;
+}
+
+.border-top-dashed {border-top:1px dashed #ddd;}
+.border-top-dashed-blue {border-top:1px dashed #5c90d2;}
+.border-top-blue {border-top:1px solid #5c90d2;}
+
+.optaskBox{ margin-top:25px; padding-top: 20px; border-top:1px dashed #ddd;}
+.optaskShell{}
+.optaskOneShell{}
+
+
+.optaskContent{ padding:10px; }
+.optlogBox{}
+.textarea{ width:95%; height: 130px; border:1px solid #ddd;}
+.textarea_two_rows{ width:95%; height: 50px; border:1px solid #ddd;}
+.optlogTableShell{ max-height: 400px; overflow: auto;}
+.w100{ width:100px;}
+.optaskEx{ font-size: 13px;}
+.patientworkShell{ border: #ccc solid 1px; padding: 15px 5px }
+
+.topReply{ margin: 10px auto; width:100%;}
+.topReply-contentShell{
+    background: #fff;
+    border: 1px solid #ccc;
+    border-top: none;
+    padding: 10px 15px;
+}
+
+.optask {}
+.optask-t-active {color: #70b9eb; border-bottom:1px solid #70b9eb !important;}
+.optask-t{ min-height: 40px; line-height: 40px; padding-left: 15px; cursor: pointer;border-bottom:1px solid #e9e9e9;}
+.optask-c{padding-top:10px;}
+.optask-tNo{ background: #dae4e5; color: #333;}
+.optask-tActive{ background: #EEEE98; color: #333;}
+.optask-handlebox{ margin-bottom: 10px;}
+.optask-innershell{ padding: 10px 5px; margin:10px 0px; border:1px solid #5c90d2; }
+.patientBaseBox{ margin: 10px 0px; padding: 10px 0; line-height: 120%; background: #F8FAE6; }
+.patientBaseBox-item span{ margin-right: 5px;}
+.headBox{ margin-bottom: 20px;}
+.headBox img{ width: 60px; border-radius: 30px;}
+.headBox-name{ margin-left: 5px;}
+
+.evaluate-box{margin:10px 10px 10px 15px;background: #f4eff9;padding: 10px;}
+.evaluate-box-title{margin:-10px -10px 10px -15px;padding:5px;background: #f3c8f9;font-weight: bold;cursor: pointer;}
+.evaluate-box-content{}
+
+/*分组课程模块相关*/
+.handleShell{ margin-top:20px;}
+.replyShell{ padding: 10px;}
+.reply-msg{ width:95%; height: 130px;}
+
+.actItem{ margin-bottom:20px; border: 1px solid #ddd;}
+.actItem-t{ height:40px; line-height:40px; padding-left: 20px; position: relative; cursor: pointer;}
+.actItem-title{ color: #337ab7; font-size: 16px;}
+.actItem-time{ color: #999; font-size: 12px; position: absolute; right:15px; }
+.actItem-c{ padding: 10px; border-top: 1px solid #ccc;}
+
+.pgroupBox{ padding: 10px 10px 5px; background: #f7f7f7; margin-bottom: 20px; border: 1px solid #ddd;}
+.pgroupBox a{ margin:0px 5px 5px 0px;}
+.pgroupselect{ width:95px; height:35px; border: 1px solid #ddd; background: #fff;}
+.textarea{ width:95%; height: 130px; border:1px solid #ddd;}
+.removePgroupBtn{}
+
+.isokBtn{ cursor: pointer;}
+.okBtnShell{ padding: 0px 0px 10px 10px;}
+/*分组课程模块相关*/
+.content-left ul { padding-left: 5px;}
+.content-left ul li{ list-style: none;}
+.optasktplBox a { margin-bottom: 5px;}
+
+.btnSection{ margin-top: 20px;}
+.replySection{ margin-top: 20px;}
+.reply-msg{ border:1px solid #ddd; padding: 5px; width: 100%; border-radius: 3px;}
+
+/*ocrPicModel相关*/
+.checkPic { width: 100%; height: 100%; }
+.width-95 { width: 95%; }
+#picture-box img { width: 100%; height: 100%; }
+.modal .viewer-container { background-color: #fff; }
+.modal section { min-height: 900px; }
+.margin-b-15 { margin-bottom: 15px; }
+.progress { position: fixed; top: 0; width: 100%; z-index: 160;}
+.audit-info div{ line-height: 30px;}
+.ocr-modal-content {min-height: 950px;background-color: #fff;}
+
+
+/*ocr table 样式*/
+.ocr-modal-content .patient_info tr, .report_items tr, .drugItem tr, .drugList tr {width: 100%;}
+
+.ocr-modal-content .patient_info tr td, .report_items tr td, .drugItem tr td, .drugList tr td {text-align: center;height: 36px;line-height: 36px;}
+
+.ocr-modal-content thead tr td {border: 1px solid #f0f0f0;}
+
+.ocr-modal-content .patient_info tr td {width: 25%;}
+
+.ocr-modal-content .report_items tr td {width: 20%;}
+
+.ocr-modal-content .drugItem tr td, .drugList tr td {width: 50%}
+
+.ocr-modal-content #table-box input {border: 1px solid #f0f0f0;width: 100%;text-align: center;}
+
+.ocr-modal-content #table-box input:focus {border: 1px solid #5c90d2;}
+
+.ocr-modal-content #table-box .btn-info {position: absolute;margin-top: 12px;}
+
+.ocr-modal-content #table-box form {margin-bottom: 15px;}
+
+.ocr-modal-content .audit-info {margin: 15px 0;}
+
+.ocr-modal-content .audit-info span {margin-right: 15px;}
+
+
+/*cdrmeeting文字现实样式 开始*/
+/*清除子元素浮动*/
+ .oh {overflow: hidden;}
+
+.cdr-meeting-box textarea {border: none;resize: none;background: rgba(0,0,0,0);width:100%;/*自动适应父布局宽度*/overflow:auto;word-break:break-all;}
+
+.cdr-close-div {width: 100%;text-align: right;}
+
+.cdr-close-btn {border: none;background-color: #fff;}
+
+.imgWhite {position: absolute;left: 10px;width: 40px;height: 40px;border-radius: 50%;margin-left: 20px;}
+
+.imgBlue {position: absolute;right: 10px;width: 40px;height: 40px;border-radius: 50%;margin-right: 20px;}
+
+.textWhite {min-height: 40px;margin-left: 60px;margin-right: 10px;margin-bottom: 15px;padding: 10px 10px;display: block;position: relative;border-radius: 6px;background-color: #e0e0e0;box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.05);float: left;}
+
+.textWhite:before {display: block;content: "";width: 0;height: 0;position: absolute;left: -6px;top: 14px;border-top: solid 6px transparent;border-right: 6px solid #e0e0e0;border-bottom: solid 6px transparent;}
+
+.textBlue {min-height: 40px;position: relative;margin-left: 10px;margin-right: 60px;margin-bottom: 15px;padding: 10px 10px;display: block;border-radius: 6px;background-color: #5c90d2;box-shadow: 0 5px 15px 0 rgba(41, 75, 255, 0.3);color: #fff;float: right;}
+
+.textBlue:before {display: block;content: "";width: 0;height: 0;position: absolute;right: -6px;top: 14px;border-top: solid 6px transparent;border-left: 6px solid #5c90d2;border-bottom: solid 6px transparent;}
+
+.cdr-btn-div {width: 100%;text-align: right;}
+/*cdrmeeting文字现实样式 结束*/

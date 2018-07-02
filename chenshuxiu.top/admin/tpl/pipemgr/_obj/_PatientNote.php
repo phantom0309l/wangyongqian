@@ -1,1 +1,0 @@
-<div class="thankContent"><?= $a->obj->content ?></div>

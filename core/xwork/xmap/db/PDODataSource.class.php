@@ -31,9 +31,7 @@ abstract class PDODataSource
     // 连接数据库,静态方法
     public static function connect ($dsn, $username, $password) {
         // if (isset($_GET['sjp'])) {
-        echo "++++++++++++++++++++++";
-         echo "<br>$dsn,$username,$password<br>";
-         echo '---------------------';
+//         echo "<br>$dsn,$username,$password<br>";
         // }
         try {
             $connection = new PDO($dsn, $username, $password);

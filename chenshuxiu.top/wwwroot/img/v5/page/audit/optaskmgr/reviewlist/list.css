@@ -1,0 +1,9 @@
+.diamondDiv{
+    display: inline-block;
+    border: 1px solid #ddd;
+    margin: 10px 10px 10px 0px;
+    padding: 8px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+}

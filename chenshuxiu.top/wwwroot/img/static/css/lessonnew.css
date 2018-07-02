@@ -1,0 +1,75 @@
+
+body{background:white;font-family: "Segoe UI",Arial,Helvetica,"Microsoft Jhenghei","Hiragino Sans GB","WenQuanYi Zen Hei","Microsoft Yahei",STHeiti,"WenQuanYi Micro Hei",times, sans-serif; color:#333;}
+a{text-decoration:none;}
+li{list-style:none;}
+
+
+.ms-controller{
+  visibility: hidden
+}
+
+
+.mt20{ margin-top:20px;}
+.mt40{ margin-top:40px;}
+.mt18{ margin-top:18px;}
+.ml10{ margin-left:10px;}
+.mr20{ margin-right:20px;}
+.mb5{ margin-bottom:9px;font-size:16px;font-weight:bold;color:#555;display:inline-block;}
+.tc{ text-align:center;}
+.tr{ text-align:right;}
+.fl{ float:left;}
+.oh{ overflow:hidden;}
+.clearfix:after{content:".";display:block;height:0;clear:both;visibility:hidden;}
+.clearfix{display:inline-block;}
+#pgtitle{text-align:center;font-size:21px;color:#555;}
+.pgtline{border:none;border-bottom: 1px solid #ddd;width:30%;margin-left:35%;margin-top:18px;}
+
+/* -- 顶部固定栏 -- */
+#topbar{
+  position:fixed;
+  top:0px;
+  height:48px;
+  width:100%;
+  background:white;
+  border-bottom:1px solid #ccc;
+  box-shadow: 0px 0px 1px 1px #ddd;
+  z-index:999;
+}
+#lg{display:inline-block;float:left;font-size:18px;height:48px;line-height:48px;padding:0px 3%;word-spacing: -2px;color:white;box-sizing:border-box;background:#f66;box-shadow: 0px 0px 1px #c66 inset;}
+#aline{height:48px;position:absolute;top:0px;right:0px;}
+#aline>a{line-height:48px;color:#555;font-size:15px;margin-right:3px;}
+
+/* -- 主内容框 --*/
+#main{position:relative;margin-top:0px;width:98%;margin-left:1%;padding-top:10px;}
+.fbt-container{position:relative;margin-top:0px;padding:15px 10px;}
+
+/* -- 页面标题 -- */
+.sptitle{color:#555;border-left:3px solid #09f;text-indent:15px;margin-top:18px;margin-bottom:6px;line-height:18px;padding-bottom:6px;display:block;}
+
+/* -- 仅展示用句 -- */
+.mainp, .mainp_hwk{font-size:16px;color:#555;margin-top:12px;width:94%;margin-left:3%;line-height:24px;letter-spacing:1px;}
+
+.fbt-btn {color:white;background:#f66;display:inline-block;height:42px;line-height:42px;padding: 0px 27px;border-radius:21px;font-size:16px;text-decoration:none;}
+.fbt-ta{ width:97%; border:1px solid #ddd; background:#fff; border-radius:3px; padding:5px; height:54px;}
+.fbt-text{ width:97%; border:1px solid #ddd; background:#fff; border-radius:3px; padding:5px; line-height:120%;}
+.fbt-num{ width:30%; border:1px solid #ddd; background:#fff; border-radius:3px; padding:5px; line-height:120%;}
+
+.fbt-vLine{ width:0px; height:0px; border-left:1px solid #f66; height:82px; display:inline-block; margin:0px 20px;vertical-align: middle;}
+
+.questionBox{ padding:8px; background:#6EC0F6; color:#fff; width:96%;}
+.questionBox-num{ font-size:24px;}
+.questionBox-content>p{
+  line-height:24px;
+  font-size:16px;
+}
+.steps{ position:relative; height:20px; width:100%;}
+.step-line{ width:100%; height:1px; background:#eee; position:absolute; top:9px;}
+.step-dot{ width:20px; height:20px; background:#ccc; border-radius:10px; position:absolute;}
+.step-dotNow{ background:#f66;}
+.step-dotWill{ background:#fbb;}
+
+
+/* -- 居中按钮 -- */
+.tailbtns{text-align:center;height:48px;line-height:48px;margin-top:12px;margin-bottom:12px;}
+/* -- 标准圆角按钮 -- */
+.tailbtns>.bbtn {color:white;background:#09f;display:inline-block;height:42px;line-height:42px;padding: 0px 27px;border-radius:21px;font-size:16px;text-decoration:none;}

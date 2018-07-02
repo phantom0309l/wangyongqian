@@ -270,8 +270,8 @@ class UmengPush
 
     public static function push2Ios ($doctorid, $diseaseid, $patientid, $patientname, $pipeid) {
 
-        $title = '方寸医生';
-        $desc = '您收到一条来自方寸医生的消息';
+        $title = '王永前门诊手术预约';
+        $desc = '您收到一条来自王永前门诊手术预约的消息';
         $payload = '{"diseaseid":' . $diseaseid . ',"patientid":' . $patientid . ',"patientname":' . $patientname . ',"pipeid":' . $pipeid . '}';
 
         $umengPush = new UmengPush();
@@ -283,8 +283,8 @@ class UmengPush
 
     function sendIOSBroadcast ($doctorid, $diseaseid, $patientid, $patientname, $pipeid) {
 
-        $title = '方寸医生';
-        $desc = '您收到一条来自方寸医生的消息';
+        $title = '王永前门诊手术预约';
+        $desc = '您收到一条来自王永前门诊手术预约的消息';
 
         try {
             $brocast = new IOSBroadcast();

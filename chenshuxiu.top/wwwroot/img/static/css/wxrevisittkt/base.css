@@ -1,0 +1,124 @@
+div.mb10 {
+    margin-bottom: 10px;
+}
+
+.bar-left-blue{
+    padding-left: 10px;
+    border-left: 3px solid #2e61bc;
+    margin: 20px auto 20px 15px;
+    font-weight: bold;
+    font-size: 18px;
+    color:#555;
+}
+
+.panel-blue{
+    margin: 0px 15px 0px 28px;
+    padding: 15px 0px 15px 15px;
+    background-color: #f1f6ff;
+    border: 1px solid #a1c1fa;
+    border-radius: 4px;
+    color:#555;
+}
+
+.dot-blue{
+    height: 4px;
+    width: 4px;
+    border-radius: 4px;
+    background-color: #6c90d1;
+    display: inline-block;
+    margin-right: 6px;
+    margin-bottom: 4px;
+}
+
+.triangle-blue{
+    width: 0;
+    height: 0;
+    border-top: 5px solid transparent;
+    border-left: 8px solid #2e61bc;
+    border-bottom: 5px solid transparent;
+    display: inline-block;
+}
+.btn-blue{
+    padding: 6px 12px 6px 12px;
+    margin: 20px 0px 0px 15px;
+    background-color: #bdd5fe;
+    border: 1px solid #719ff0;
+    color: #2e61bc;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn-red{
+    padding: 6px 12px 6px 12px;
+    margin: 10px 0px 0px 15px;
+    background-color: #f7d1ce;
+    border: 1px solid #fd958d;
+    color: #fa6559;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.scheduleBox {
+    color: #fd5c5c;
+    padding: 15px;
+    background: #f2f6ff;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+}
+
+.dateList-item {
+    padding: 10px;
+
+}
+
+.dateListShell{
+    margin: 15px 30px;
+}
+
+.border-dot-blue{
+    border: 1px dashed #2e61bc;
+    margin-bottom: 13px;
+    background-color: #f2f6ff;
+}
+
+.dateList-item-submit{
+    padding: 10px;
+}
+.selected{
+    background-color: #bdd5fe;
+}
+
+.dateList-gray{
+    background-color: #f1f1f1;
+}
+
+.confirm {
+    color: white;
+    background-color: #2e61bc;
+    border: none;
+    height: 25px;
+    width: 78px;
+    display: inline-block;
+}
+
+span{
+    display: inline-block;
+}
+
+textarea{
+    margin: 10px 0px;
+    width: 95%;
+    border: 1px solid #2e61bc;
+    background-color: #f2f6ff;
+    font-size: 16px;
+    padding: 10px;
+}
+
+input[type='text']{
+    margin: 10px 0px;
+    width: 95%;
+    border: 1px solid #2e61bc;
+    background-color: #f2f6ff;
+    font-size: 16px;
+    padding: 10px;
+}

@@ -1,0 +1,112 @@
+*{margin:0px;padding:0px;}
+
+
+#intro,#effect{
+  position: fixed;
+  width:100%;
+  height:100%;
+  background:#555;
+  z-index:9;
+  top:0px;
+  color: white;
+  text-align:center;
+}
+#intro>h3{
+  text-align:center;
+  height:63px;
+  line-height:63px;
+  font-size: 21px;
+}
+#intro>h4{
+  text-align:left;
+  width:80%;
+  margin-left:10%;
+  margin-bottom: 12px;
+}
+#intro>p,#effect>p{
+  width:80%;
+  margin-left:10%;
+  margin-bottom: 6px;
+  line-height:24px;
+  font-size:14px;
+  text-align:left;
+}
+#intro>.button{
+  background: #999;
+  display:inline-block;
+  border-radius: 14px;
+  margin-top: 12px;
+  height:27px;
+  line-height:27px;
+  padding:0px 27px;
+  cursor: pointer;
+}
+#intro>.button:active{
+  background:#333;
+  color:#ccc;
+}
+#intro>#scd{
+  margin-top:24px;
+  font-size:63px;
+}
+#effect>h1{
+  margin-top:36px;
+  margin-bottom:18px;
+  width:80%;
+  margin-left:10%;
+  text-align:left;
+}
+
+
+
+.main{
+  position:relative;
+  width: 100%;
+  height:270px;
+  background: black;
+}
+#init{
+  height:270px;
+  line-height:270px;
+  position:absolute;
+  width:100%;
+  background:black;
+  z-index:9;
+  color:#ccc;
+  text-align:center;
+  font-size:45px;
+}
+.rb{
+  position:relative;
+  height:135px;
+  color: white;
+  line-height:135px;
+  font-size:56px;
+  text-align:center;
+}
+
+.handler{
+  margin-top:12px;
+  width:100%;
+  height:150px;
+  border: 1px solid #ccc;
+  background:#eee;
+}
+.btn{
+  height:120px;
+  line-height:120px;
+  text-align:center;
+  width:35%;
+  margin-left:7%;
+  margin-top: 15px;
+  float: left;
+  background: #555;
+  color:white;
+  font-size:45px;
+}
+.acbtn:active{
+  background:#333;
+}
+#rbtn{
+  margin-left:15%;
+}

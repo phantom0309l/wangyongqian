@@ -1,0 +1,40 @@
+.herbPanel{
+    padding: 10px;
+    margin-top: 10px;
+    border:1px solid #e5e4e6;
+}
+.herbPanelTitle{
+    margin: -10px -10px 0px -10px;
+    background: #e5e4e6;
+    padding: 10px;
+    font-weight: bold;
+    font-size: 22px;
+}
+
+.herbPanelBox{
+    margin-top: 10px;
+}
+
+.herbBox{
+    display: inline-block;
+    float: left;
+    padding: 2px 5px;
+    border: 1px solid #4f8aee;
+    text-align: center;
+    margin: 3px;
+    width: 150px;
+    color: #ffffff;
+    background: #4f8aee;
+}
+
+.herbIndexPanel{
+    padding: 2px 5px;
+    position: fixed;
+    z-index: 999;
+    background: #fff;
+}
+.herbIndexBox{
+    padding: 5px 2px;
+    font-size: 16px;
+    text-align: center;
+}
