@@ -20,7 +20,7 @@ $dbExecuter = BeanFinder::get("DbExecuter");
 // 'xanswersheets', 'xanswers', 'xansweroptionrefs' );
 
 $entityNames = [
-    'Order',
+    'EmailCode',
 ];
 
 $allTables = array();
