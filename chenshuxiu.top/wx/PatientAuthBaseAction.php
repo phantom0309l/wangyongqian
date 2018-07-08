@@ -1,6 +1,6 @@
 <?php
 
-class PatientAuthBaseAction extends WxUserAuthBaseAction
+class PatientAuthBaseAction extends WxAuthBaseAction
 {
 
     // ########################################
@@ -17,7 +17,9 @@ class PatientAuthBaseAction extends WxUserAuthBaseAction
     protected function patientCheck() {
         $mypatient = $this->mypatient;
         if (false == $mypatient instanceof Patient) {
-            UrlFor::jump302("/baodao/baodao?openid={$this->wxuser->openid}");
+            $theUrl = XContext::getValue("theUrl");
+            $this->clearMyUserIdCookie();
+            UrlFor::jump302("/baodao/baodao?redirect_url=" . urlencode($theUrl));
         } else {
             if (1 != $mypatient->status) {
                 $this->jump302ResultPage("报到信息已提交，等待审核", 0);

@@ -106,28 +106,6 @@ class Pipe extends Entity
             $user = $entity->user;
         } catch (Exception $ex) {}
 
-        if ($wxuserid < 1) {
-            $wxuserid = $user->getWxUserIdIfOnlyOne(); // 可能存在
-            $userid = $user->id; // 肯定存在
-            $patientid = $user->patientid; // 可能存在
-        }
-
-        // 正修
-        if ($wxuserid > 0) {
-            $wxuser = WxUser::getById($wxuserid);
-            if ($wxuser instanceof WxUser) {
-                $patientid = $wxuser->patientid;
-                $patient = $wxuser->patient;
-            }
-        } else {
-            // 特殊修正
-            if ($entity instanceof WxUser) {
-                $wxuserid = $entity->id;
-                $patientid = $entity->patientid;
-                $patient = $entity->patient;
-            }
-        }
-
         // 特殊修正, obj 是 Patient
         if ($entity instanceof Patient) {
             $patientid = $entity->id;
@@ -151,17 +129,6 @@ class Pipe extends Entity
             $patient = Patient::getById($patientid);
         }
 
-        // 反修正 wxuserid, doctorid
-        if ($patient instanceof Patient) {
-            if ($wxuserid < 1) {
-                $wxuserid = $patient->getWxUserIdIfOnlyOne();
-            }
-
-            if ($doctorid < 1) {
-                $doctorid = $patient->doctorid;
-            }
-        }
-
         $objtype = get_class($entity);
 
         $subdomain = XContext::getValueEx("xdomain", "");
@@ -170,7 +137,6 @@ class Pipe extends Entity
         if ($objcode == "create") {
             $row["createtime"] = $entity->createtime;
         }
-        $row["wxuserid"] = $wxuserid;
         $row["patientid"] = $patientid;
         $row["doctorid"] = $doctorid;
         $row["objtype"] = $objtype;
@@ -178,15 +144,6 @@ class Pipe extends Entity
         $row["objcode"] = $objcode;
         $row["subdomain"] = $subdomain;
         $pipe = Pipe::createByBiz($row);
-
-        if ($pipe->patient instanceof Patient && $pipe->isUserPipe()) {
-            $pipe->patient->lastpipe_createtime = $pipe->createtime;
-            $pipe->patient->lastpipeid = $pipe->id;
-        }
-
-        if ($pipe->wxuser instanceof WxUser && $pipe->isUserPipe()) {
-            $pipe->wxuser->lastpipe_createtime = $pipe->createtime;
-        }
 
         XContext::setValue('EntityBase::__get-debug-close', false);
 

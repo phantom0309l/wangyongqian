@@ -73,4 +73,12 @@ class WxAuthBaseAction extends BaseAction
         XCookie::set0("_mypatientid_", '', -1);
     }
 
+    public function setJumpPathResultPage ($noticestr, $closepage = 1, $gourl = "") {
+        XContext::setJumpPath("/common/result?noticestr={$noticestr}&closepage={$closepage}&gourl={$gourl}");
+    }
+
+    public function jump302ResultPage ($noticestr, $closepage = 1, $gourl = "") {
+        UrlFor::jump302(Config::getConfig('wx_uri') . "/common/result?noticestr={$noticestr}&closepage={$closepage}&gourl={$gourl}");
+    }
+
 }

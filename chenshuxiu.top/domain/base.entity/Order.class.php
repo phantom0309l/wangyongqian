@@ -136,7 +136,7 @@ class Order extends Entity
                 'email' => $this->patient->email,
             ],
             'createby_str' => $this->getCreatebyStr(),
-            'operationcategory_str' => $this->getOperationCategoryStr(),
+            'operationcategory_str' => $this->operationcategory,
             'status' => $this->status,
             'status_desc' => $this->getStatusDesc(),
             'auditstatus' => $this->auditstatus,
@@ -153,7 +153,7 @@ class Order extends Entity
     }
 
     // 通过
-    public function pass ($auditremark) {
+    public function pass($auditremark) {
         $this->auditstatus = 1;
         $this->auditremark = $auditremark;
         $this->audittime = date('Y-m-d H:i:s');
@@ -162,7 +162,7 @@ class Order extends Entity
     }
 
     // 拒绝
-    public function refuse ($auditremark = '') {
+    public function refuse($auditremark = '') {
         $this->auditstatus = 2;
         $this->auditremark = $auditremark;
         $this->audittime = date('Y-m-d H:i:s');
@@ -171,7 +171,7 @@ class Order extends Entity
     }
 
     // 运营上线
-    public function auditOnline () {
+    public function auditOnline() {
         $this->auditstatus = 1;
         $this->audittime = date('Y-m-d H:i:s');
         $this->closeby = 'Auditor';
@@ -180,7 +180,7 @@ class Order extends Entity
     }
 
     // 运营下线
-    public function auditOffline () {
+    public function auditOffline() {
         $this->auditstatus = 3;
         $this->audittime = date('Y-m-d H:i:s');
         $this->closeby = 'Auditor';
@@ -189,7 +189,7 @@ class Order extends Entity
     }
 
     // getIsclosedStr
-    public function getIsclosedStr () {
+    public function getIsclosedStr() {
         if ($this->isclosed) {
             return '关闭';
         } else {
@@ -212,7 +212,7 @@ class Order extends Entity
         }
 
         if ($auditstatus == 0) {
-            return "待审核";
+            return "等待审核";
         }
 
         if ($status == 0 && $isclosed == 1) {
@@ -229,15 +229,19 @@ class Order extends Entity
         }
 
         if ($patient_confirm_status == 0) {
-            return "未确认";
+            if (!$this->isStepConfirm()) {
+                $d = date('Y-m-d', strtotime('-7 day', strtotime($this->thedate)));
+                return "审核通过，{$d}进行最后确认";
+            }
+            return "等待患者确认";
         }
 
         if ($patient_confirm_status == 1) {
-            return "患者确认";
+            return "患者确认如约就诊";
         }
 
         if ($patient_confirm_status == 2) {
-            return "患者拒绝";
+            return "患者不能如约就诊";
         }
 
         if ($this->thedate >= date('Y-m-d')) {
@@ -259,6 +263,22 @@ class Order extends Entity
         }
 
         return $str;
+    }
+
+    /**
+     * 是否到了患者确认步骤
+     * 倒计时第7天发送确认
+     * @return bool
+     */
+    public function isStepConfirm() {
+        $time1 = strtotime(date('Y-m-d'));
+        $time2 = strtotime($this->thedate);
+        $diff = ($time2 - $time1) / 86400;
+        return $this->status == 1
+            && $this->auditstatus == 1
+            && $this->isclosed == 0
+            && $this->patient_confirm_status == 0
+            && $diff <= 7;
     }
 
     // ====================================

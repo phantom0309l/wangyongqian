@@ -493,7 +493,7 @@ button.fc-btn, input.fc-btn {
 }
 
 .fc-btn_primary {
-    background-color: #1AAD19;
+    background-color: #4472c5;
     color: #fff;
     border: 0;
 }
@@ -520,6 +520,10 @@ button.fc-btn, input.fc-btn {
 .fc-btn_warning:active {
     color: rgba(255, 255, 255, 0.6);
     background-color: #f55400;
+}
+
+.weui-btn_default {
+    color: #666;
 }
 
 .weui-uploader__file {

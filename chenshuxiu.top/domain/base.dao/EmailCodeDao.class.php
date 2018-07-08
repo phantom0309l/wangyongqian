@@ -7,8 +7,8 @@
 class EmailCodeDao extends Dao
 {
 
-    public static function getOneByEmail($email) {
-        $cond = " AND email = :email ";
+    public static function getLastOneByEmail($email) {
+        $cond = " AND email = :email ORDER BY id DESC";
         $bind = [
             ':email' => $email
         ];

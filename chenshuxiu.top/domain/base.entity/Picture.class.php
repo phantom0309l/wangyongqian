@@ -18,7 +18,6 @@ class Picture extends Entity
             'picext',
             'width',
             'height',
-            'rotate',
             'size',
             'objtype',
             'objid',
@@ -62,17 +61,14 @@ class Picture extends Entity
     }
 
     // 获取图片url, 最常用的函数
-    public function getSrc($width = 0, $height = 0, $iscut = false, $rotate = 0) {
+    public function getSrc($width = 0, $height = 0, $iscut = false) {
         if ($width == 0) {
             $width = 1500;
         }
         if ($height == 0) {
             $height = 1500;
         }
-        if ($rotate == 0) {
-            $rotate = $this->rotate;
-        }
-        $a = $this->getSrcImg($this->picname, $this->picext, $width, $height, $iscut, $rotate);
+        $a = $this->getSrcImg($this->picname, $this->picext, $width, $height, $iscut);
         return $a;
     }
 
@@ -224,7 +220,6 @@ class Picture extends Entity
     // $row["picext"] = $picext;
     // $row["width"] = $width;
     // $row["height"] = $height;
-    // $row['rotate'] = $rotate;
     // $row["size"] = $size;
     // $row["objtype"] = $objtype;
     // $row["objid"] = $objid;
@@ -236,7 +231,6 @@ class Picture extends Entity
         DBC::requireNotEmpty($row, "Picture::createByBiz row cannot empty");
 
         $default = array();
-        $default['rotate'] = 0;
         $default['objtype'] = '';
         $default['objid'] = 0;
         $default['type'] = 0;
@@ -427,15 +421,15 @@ class Picture extends Entity
     }
 
     // 生成图片url
-    public static function getSrcImg($picname, $picext, $width = 0, $height = 0, $iscut = false, $rotate = 0) {
+    public static function getSrcImg($picname, $picext, $width = 0, $height = 0, $iscut = false) {
         if ($width == 0) {
-            return Config::getConfig("photo_uri") . "/" . $picname . '.' . $picext . ($rotate == 0 ? '' : "?rotate={$rotate}");
+            return Config::getConfig("photo_uri") . "/" . $picname . '.' . $picext;
         } elseif ($height == 0) {
-            return Config::getConfig("photo_uri") . "/" . $picname . ".{$width}." . $picext . ($rotate == 0 ? '' : "?rotate={$rotate}");
+            return Config::getConfig("photo_uri") . "/" . $picname . ".{$width}." . $picext;
         } elseif ($iscut) {
-            return Config::getConfig("photo_uri") . "/" . $picname . ".{$width}-{$height}." . $picext . ($rotate == 0 ? '' : "?rotate={$rotate}");
+            return Config::getConfig("photo_uri") . "/" . $picname . ".{$width}-{$height}." . $picext;
         } else {
-            return Config::getConfig("photo_uri") . "/" . $picname . ".{$width}_{$height}." . $picext . ($rotate == 0 ? '' : "?rotate={$rotate}");
+            return Config::getConfig("photo_uri") . "/" . $picname . ".{$width}_{$height}." . $picext;
         }
     }
 

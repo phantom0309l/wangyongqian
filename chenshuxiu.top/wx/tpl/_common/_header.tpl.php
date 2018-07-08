@@ -27,7 +27,7 @@
     <link rel="stylesheet" href="<?= $img_uri ?>/v5/lib/weui-1.1.2.min.css">
     <link rel="stylesheet" href="<?= $img_uri ?>/v5/lib/jquery-weui.min.css">
 
-    <link href="<?= $img_uri ?>/v5/page/wx/base.css?ver=2018062701" rel="stylesheet" type="text/css">
+    <link href="<?= $img_uri ?>/v5/page/wx/base.css?ver=2018062702" rel="stylesheet" type="text/css">
 
     <script src="<?= $img_uri ?>/static/js/jquery-2.1.4.min.js"></script>
 

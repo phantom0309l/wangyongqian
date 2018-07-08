@@ -36,6 +36,7 @@ class Patient extends Entity
         , 'other_contacts'    //备用联系人
         , 'email'    //邮箱
         , 'max_order_cnt'    //最大预约次数
+        , 'password'    //密码
         );
     }
 
@@ -83,13 +84,14 @@ class Patient extends Entity
         $default["subscribe_cnt"] = 1;
         $default["wxuser_cnt"] = 1;
         $default["lastpipeid"] = 0;
-        $default["lastpipe_createtime"] = '';
+        $default["lastpipe_createtime"] = '0000-00-00 00:00:00';
         $default["lastactivitydate"] = '0000-00-00';
         $default["isactivity"] = 0;
         $default["mobile"] = '';
         $default["other_contacts"] = '';
         $default["email"] = '';
-        $default["isactivity"] = 99;
+        $default["max_order_cnt"] = 20;
+        $default["password"] = '';
 
         $row += $default;
         return new self($row);

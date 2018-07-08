@@ -4,10 +4,6 @@ $(document).ready(function () {
         init: function () {
             var self = this;
             self.handleSubmit();
-            self.handleIsAgree();
-            self.handleDisclaimer();
-
-            self.initBaodaoData();
         },
         handleSubmit: function () {
             var self = this;
@@ -27,9 +23,9 @@ $(document).ready(function () {
                 if (!self.canClick) {
                     return;
                 }
-                $.showLoading('正在提交');
+                $.showLoading('正在登录');
                 $.ajax({
-                    url: '/baodao/addpost',
+                    url: '/baodao/loginpost',
                     data: $('#theform').serialize(),
                     dataType: 'json',
                     type: 'post',
@@ -37,9 +33,8 @@ $(document).ready(function () {
                         $.hideLoading();
                         if (response.errno === '0') {
                             self.canClick = false;
-                            self.removeBaodaoData();
 
-                            $.toast('注册成功');
+                            $.toast('登录成功');
 
                             var redirect_url = $('#redirect_url').val();
                             if (redirect_url !== '' && redirect_url !== null && redirect_url !== undefined) {
@@ -134,76 +129,6 @@ $(document).ready(function () {
             }
 
             return flag;
-        },
-        handleIsAgree: function () {
-            $("#isagree").on("click", function () {
-                $("#isagree").children().toggleClass("blue-box-selected");
-                $("#isagree").toggleClass("isagree-checked");
-                var disclaimerError = $(".disclaimerError");
-                if ($("#isagree").hasClass("isagree-checked")) {
-                    disclaimerError.hide();
-                } else {
-                    disclaimerError.show();
-                }
-            })
-        },
-        handleDisclaimer: function () {
-            var self = this;
-            $(".disclaimerLink").on("click", function (e) {
-                e.preventDefault();
-                self.setBaodaoData();
-                window.location.href = $(this).attr("href");
-            })
-        },
-        initBaodaoData: function () {
-            var self = this;
-            var data = self.getBaodaoData();
-            $.each(data, function (k, v) {
-                // 过滤掉diseaseid，因为肿瘤的option value有重复
-                if (v == "" || k === 'diseaseid') {
-                    return true;
-                }
-                var item = $("input[name='" + k + "'], select[name='" + k + "']");
-                item.val(v);
-            })
-        },
-        getBaodaoData: function () {
-            var data = {};
-            if (window.localStorage) {
-                var baodaoData = window.localStorage.getItem("baodaoData");
-                if (baodaoData) {
-                    data = JSON.parse(baodaoData);
-                }
-            }
-            return data;
-        },
-        setBaodaoData: function () {
-            var self = this;
-            var obj = self.getFormData();
-            if (window.localStorage) {
-                var baodaoData = JSON.stringify(obj);
-                window.localStorage.setItem("baodaoData", baodaoData);
-            }
-        },
-        removeBaodaoData: function () {
-            if (window.localStorage) {
-                var baodaoData = window.localStorage.getItem("baodaoData");
-                if (baodaoData) {
-                    window.localStorage.removeItem("baodaoData");
-                }
-            }
-        },
-        getFormData: function () {
-            var obj = {};
-            var items = $("#theform").find("input, select");
-            items.each(function () {
-                var me = $(this);
-                var name = me.attr("name");
-                if (name) {
-                    obj[name] = me.val();
-                }
-            })
-            return obj;
         },
         getWxShopid: function () {
             return $("#wxshopid").val();

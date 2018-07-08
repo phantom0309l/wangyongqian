@@ -99,6 +99,8 @@ class OrderMgrAction extends AdminBaseAction
         }
 
         $sql .= $cond;
+        $sql .= " ORDER BY id DESC ";
+
         $orders = OrderDao::getListBySql4Page($sql, $pagesize, $pagenum, $bind);
         $arr = [];
         foreach ($orders as $order) {

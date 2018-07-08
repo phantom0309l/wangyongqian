@@ -48,6 +48,8 @@ class PatientMgrAction extends AdminBaseAction
             $bind[':birthday'] = "{$birthday}";
         }
 
+        $cond .= " ORDER BY id DESC ";
+
         $patients = PatientDao::getListByCond4Page($pagesize, $pagenum, $cond, $bind);
         $arr = [];
         foreach ($patients as $patient) {

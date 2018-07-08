@@ -12,6 +12,7 @@ include_once($tpl . "/_common/_header.tpl.php");
 <div class="page js_show baodaoimp">
     <form id="theform" method="post" action="/baodao/addpost" style="margin-top: 0;">
         <input type="hidden" name="doctorid" value="<?= $doctor->id ?>">
+        <input type="hidden" name="redirect_url" id="redirect_url" value="<?= $redirect_url ?>">
         <div class="weui-cells__title">基本信息</div>
         <div class="weui-cells weui-cells_form">
             <div class="weui-cell">
@@ -55,11 +56,11 @@ include_once($tpl . "/_common/_header.tpl.php");
             <div class="weui-cell">
                 <div class="weui-cell__hd">
                     <label class="weui-label">
-                        生日
+                        生日 <span style="color: red;">*</span>
                     </label>
                 </div>
                 <div class="weui-cell__bd weui-cell_primary">
-                    <input class="text-color weui-input J_form_input"
+                    <input class="text-color weui-input J_form_input J_form_input_must"
                            type="text"
                            id="birthday"
                            name="birthday"
@@ -96,54 +97,72 @@ include_once($tpl . "/_common/_header.tpl.php");
                 </div>
             </div>
 
+<!--            <div class="weui-cell">-->
+<!--                <div class="weui-cell__hd">-->
+<!--                    <label class="weui-label">-->
+<!--                        邮箱 <span style="color: red;">*</span>-->
+<!--                    </label>-->
+<!--                </div>-->
+<!--                <div class="weui-cell__bd weui-cell_primary">-->
+<!--                    <input class="text-color weui-input J_form_input J_form_input_must"-->
+<!--                           type="text"-->
+<!--                           id="email"-->
+<!--                           name="email"-->
+<!--                           value=""-->
+<!--                           placeholder="请输入邮箱"-->
+<!--                           data-type="text"-->
+<!--                           data-ismust="1"-->
+<!--                           data-code="email"-->
+<!--                           data-name="邮箱">-->
+<!--                </div>-->
+<!--            </div>-->
+
+<!--            <div class="weui-cell weui-cell_vcode">-->
+<!--                <div class="weui-cell__hd">-->
+<!--                    <label class="weui-label">验证码 <span style="color: red;">*</span></label>-->
+<!--                </div>-->
+<!--                <div class="weui-cell__bd">-->
+<!--                    <input class="weui-input J_form_input J_form_input_must"-->
+<!--                           type="text"-->
+<!--                           id="code"-->
+<!--                           name="code"-->
+<!--                           value=""-->
+<!--                           placeholder="请输入验证码"-->
+<!--                           data-type="text"-->
+<!--                           data-ismust="1"-->
+<!--                           data-code="code"-->
+<!--                           data-name="验证码">-->
+<!--                </div>-->
+<!--                <div class="weui-cell__ft">-->
+<!--                    <a class="weui-vcode-btn J_get_code">获取验证码</a>-->
+<!--                </div>-->
+<!--            </div>-->
+
             <div class="weui-cell">
                 <div class="weui-cell__hd">
                     <label class="weui-label">
-                        邮箱 <span style="color: red;">*</span>
+                        密码 <span style="color: red;">*</span>
                     </label>
                 </div>
                 <div class="weui-cell__bd weui-cell_primary">
                     <input class="text-color weui-input J_form_input J_form_input_must"
-                           type="text"
-                           id="email"
-                           name="email"
+                           type="password"
+                           id="password"
+                           name="password"
                            value=""
-                           placeholder="请输入邮箱"
+                           placeholder="请输入密码"
                            data-type="text"
                            data-ismust="1"
-                           data-code="email"
-                           data-name="邮箱">
+                           data-code="password"
+                           data-name="密码">
                 </div>
             </div>
-
-            <div class="weui-cell weui-cell_vcode">
-                <div class="weui-cell__hd">
-                    <label class="weui-label">手机号</label>
-                </div>
-                <div class="weui-cell__bd">
-                    <input class="weui-input" type="tel" placeholder="请输入手机号">
-                </div>
-                <div class="weui-cell__ft">
-                    <button class="weui-vcode-btn">获取验证码</button>
-                </div>
-            </div>
-
         </div>
-
-        <!-- 协议 -->
-        <!--        <div class="disclaimerBox">-->
-        <!--            <div>-->
-        <!--                <div id='isagree' class="blue-box">-->
-        <!--                    <div class=""></div>-->
-        <!--                </div>-->
-        <!--                <span>我已阅读并同意</span><a href="/baodao/disclaimer" class="disclaimerLink">《项目入组知情同意书》</a>-->
-        <!--            </div>-->
-        <!--            <div class="disclaimerError none">请您勾选服务协议</div>-->
-        <!--        </div>-->
 
         <!-- 按钮 -->
         <div class="weui-btn-area">
             <a class="submit-btn weui-btn weui-btn_primary" href="javascript:">提交</a>
+            <a class="login-btn weui-btn weui-btn_default" href="/baodao/login?redirect_url=<?= $redirect_url ?>">已有账号，立即登录</a>
         </div>
 
         <!--    小尾巴-->
@@ -174,6 +193,55 @@ include_once($tpl . "/_common/_header.tpl.php");
                 }
             });
         });
+
+        $('.J_get_code').on('click', function () {
+            var me = $(this);
+            var email = $('#email').val();
+
+            if (me.attr('disabled')) {
+                return false;
+            }
+
+            var reg = /^((([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})[; ,])*(([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})))$/;
+            if (!reg.test(email)) {
+                alert('请输入正确的邮箱地址');
+                return false;
+            }
+
+            $.showLoading();
+            $.ajax({
+                url: '/emailcode/sendcode',
+                data: {email: email},
+                type: 'post',
+                dataType: 'json',
+                success: function (response) {
+                    $.hideLoading();
+                    if (response.errno === '0') {
+                        $.alert('验证码已发送，请登录邮箱查看验证码');
+
+                        me.attr('disabled', true);
+                        var countdown = 60;
+                        var timer = setInterval(function () {
+                            if (countdown === 0) {
+                                me.attr('disabled', false);
+                                me.text("获取验证码");
+                                countdown = 60;
+                                clearInterval(timer);
+                            } else {
+                                countdown--;
+                                me.text(countdown + 's');
+                            }
+                        }, 1000);
+                    } else {
+                        $.alert(response.errmsg);
+                    }
+                },
+                error: function () {
+                    $.hideLoading();
+                    $.alert('请求失败');
+                }
+            })
+        })
     })
 </script>
 <?php include_once($tpl . "/_common/_footer.tpl.php"); ?>

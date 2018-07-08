@@ -13,7 +13,7 @@ class ScheduleAction extends PatientAuthBaseAction
         // 看一下是否有患者主动预约的门诊
         $order_p = OrderDao::getLastOfPatient_Open($mypatient->id, $doctor->id, 'Patient');
         if ($order_p instanceof Order) {
-            XContext::setJumpPath("/order/list");
+            XContext::setJumpPath("/order/one?orderid={$order_p->id}");
             return self::BLANK;
         }
 

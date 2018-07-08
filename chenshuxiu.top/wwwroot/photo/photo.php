@@ -19,7 +19,7 @@ ini_set('display_errors', 0);
 
 // load Config and Assembly
 include_once (dirname(__FILE__) . "/../../sys/PathDefine.php");
-include_once (ROOT_TOP_PATH . "/www/Assembly.php");
+include_once (ROOT_TOP_PATH . "/admin/Assembly.php");
 mb_internal_encoding("UTF-8");
 
 TheSystem::init(__FILE__, true);

@@ -1,6 +1,6 @@
 <?php
 
-class CommonAction extends WxUserAuthBaseAction
+class CommonAction extends WxAuthBaseAction
 {
     // 构造函数，初始化了很多数据
     public function __construct () {
