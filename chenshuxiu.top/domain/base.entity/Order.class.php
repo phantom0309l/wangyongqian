@@ -7,6 +7,8 @@
 class Order extends Entity
 {
 
+    const CONFIRM_AFTER_DAY = 7;
+
     protected function init_keys() {
         $this->_keys = self::getKeysDefine();
     }
@@ -21,6 +23,7 @@ class Order extends Entity
         , 'operationcategory'    //拟行手术方式
         , 'thedate'    //预约日期
         , 'remark'    //患者备注
+        , 'is_send_confirm'    //是否发送确认短信
         , 'patient_confirm_status'    //患者确认状态，0：未确认，1：确认来，2：确认不来
         , 'createby'    //创建人: Doctor,Patient, Auditor, System
         , 'is_mark_his'    //是否加号
@@ -61,6 +64,7 @@ class Order extends Entity
     // $row["operationcategory"] = $operationcategory;
     // $row["thedate"] = $thedate;
     // $row["remark"] = $remark;
+    // $row["is_send_confirm"] = $is_send_confirm;
     // $row["patient_confirm_status"] = $patient_confirm_status;
     // $row["createby"] = $createby;
     // $row["is_mark_his"] = $is_mark_his;
@@ -85,6 +89,7 @@ class Order extends Entity
         $default["operationcategory"] = '';
         $default["thedate"] = '';
         $default["remark"] = '';
+        $default["is_send_confirm"] = 0;
         $default["patient_confirm_status"] = 0;
         $default["createby"] = '';
         $default["is_mark_his"] = 0;
@@ -108,6 +113,7 @@ class Order extends Entity
     public function toListJsonArray() {
         $arr = [
             'id' => $this->id,
+            'createtime' => $this->createtime,
             'thedate' => $this->thedate,
             'patient' => [
                 'name' => $this->patient->name,
@@ -136,6 +142,7 @@ class Order extends Entity
                 'email' => $this->patient->email,
             ],
             'createby_str' => $this->getCreatebyStr(),
+            'voucher_picture_src' => $this->voucher_picture ? $this->voucher_picture->getSrc() : '',
             'operationcategory_str' => $this->operationcategory,
             'status' => $this->status,
             'status_desc' => $this->getStatusDesc(),
@@ -159,6 +166,9 @@ class Order extends Entity
         $this->audittime = date('Y-m-d H:i:s');
         $this->status = 1;
         $this->isclosed = 0;
+
+        $content = "您的手术预约医生已审核通过，我们将在术前1周再次短信和您确认是否可如期手术，请留意信息";
+        ShortMsg::sendManDaoTemplateSMS_j4now($this->patient->mobile, $content);
     }
 
     // 拒绝
@@ -168,6 +178,9 @@ class Order extends Entity
         $this->audittime = date('Y-m-d H:i:s');
         $this->status = 0;
         $this->isclosed = 1;
+
+        $content = "您的手术预约医生未审核通过，请您保持电话畅通，我们将电话和您核实情况";
+        ShortMsg::sendManDaoTemplateSMS_j4now($this->patient->mobile, $content);
     }
 
     // 运营上线
@@ -278,7 +291,7 @@ class Order extends Entity
             && $this->auditstatus == 1
             && $this->isclosed == 0
             && $this->patient_confirm_status == 0
-            && $diff <= 7;
+            && $diff <= Order::CONFIRM_AFTER_DAY;
     }
 
     // ====================================

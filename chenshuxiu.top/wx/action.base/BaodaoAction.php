@@ -3,10 +3,11 @@
 class BaodaoAction extends WxAuthBaseAction
 {
     public function doLogin() {
-        $redirect_url = XRequest::getValue("redirect_url", '');
+        $redirect_url = XRequest::getValue("redirect_url", 'http://wx.chenshuxiu.top/schedule/list');
+        $redirect_url = urldecode($redirect_url);
         // 已经报到
         if ($this->mypatient instanceof Patient) {
-            UrlFor::jump302("/patient/registed");
+            UrlFor::jump302($redirect_url);
         }
 
         XContext::setValue('redirect_url', $redirect_url);
@@ -19,7 +20,7 @@ class BaodaoAction extends WxAuthBaseAction
 
         $patient = PatientDao::getByMobile($mobile);
         if (false == $patient instanceof Patient) {
-            $this->returnError('邮箱不存在');
+            $this->returnError('手机号不存在');
             return self::TEXTJSON;
         }
 
@@ -35,12 +36,13 @@ class BaodaoAction extends WxAuthBaseAction
 
     // 报到页
     public function doBaodao() {
-        $redirect_url = XRequest::getValue("redirect_url", '');
+        $redirect_url = XRequest::getValue("redirect_url", 'http://wx.chenshuxiu.top/schedule/list');
+        $redirect_url = urldecode($redirect_url);
         $doctor = Doctor::getById(Doctor::WYQ);
 
         // 已经报到
         if ($this->mypatient instanceof Patient) {
-            UrlFor::jump302("/patient/registed");
+            UrlFor::jump302($redirect_url);
         }
 
         XContext::setValue('doctor', $doctor);
@@ -93,6 +95,9 @@ class BaodaoAction extends WxAuthBaseAction
         $row["mobile"] = $mobile;
 //        $row["email"] = $email;
         $row["password"] = $password;
+        $row["auditstatus"] = 1;
+        $row["auditremark"] = '系统自动审核通过';
+        $row["status"] = 1;
         $this->mypatient = $mypatient = Patient::createByBiz($row);
 
         Pipe::createByEntity($mypatient, "baodao");

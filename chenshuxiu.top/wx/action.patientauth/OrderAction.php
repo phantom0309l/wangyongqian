@@ -248,6 +248,7 @@ class OrderAction extends PatientAuthBaseAction
             $order->patient_confirm_status = 1;
         } else {
             $order->patient_confirm_status = 2;
+            $order->isclosed = 1;
 
             $order->status = 0;
         }

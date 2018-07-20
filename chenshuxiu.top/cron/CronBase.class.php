@@ -72,7 +72,7 @@ abstract class CronBase
     protected function doAfter () {
         // cronlog 修改 -----begin-----
         $unitofwork = BeanFinder::get("UnitOfWork");
-        $cronlog = CronLog::getById($this->cronlog->id, 'statdb');
+        $cronlog = CronLog::getById($this->cronlog->id);
 
         if ($this->needCronlog()) {
             $cronlog->endtime = date('Y-m-d H:i:s');

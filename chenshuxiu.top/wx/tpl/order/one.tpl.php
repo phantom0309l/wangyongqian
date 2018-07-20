@@ -200,7 +200,23 @@ include_once($tpl . "/_common/_header.tpl.php");
             "success": function (response) {
                 $.hideLoading();
                 if (response.errno === "0") {
-                    window.location.reload();
+                    if (status === '1') {
+                        fc.showMsgSuccess({
+                            title: "确认成功",  // 标题
+                            desc: "1、请于手术前1周内任意工作日时间（早8:00到下午13:00），到八大处院区C楼429找陈鑫鑫助理开抽血化验检查。<br>" +
+                            "2、如不能提前进行检查，手术日当天8点进行检查，因等待化验检查结果，当日手术时间将有所推迟。<br>" +
+                            "3、如您提前化验，并化验结果正常，手术日当天8:00携带化验结果到指定院区进行手术。",   // 描述
+                            delay: 0,   // 延时关闭，单位ms
+                            z_index: 2, // z-index，
+                        });
+                    } else {
+                        fc.showMsgSuccess({
+                            title: "取消成功",  // 标题
+                            desc: "您好，您的手术预约已为您取消，如有需要，请您重新选择合适日期进行预约。",   // 描述
+                            delay: 0,   // 延时关闭，单位ms
+                            z_index: 2, // z-index，
+                        });
+                    }
                 } else {
                     $.alert(response.errmsg);
                 }
@@ -217,6 +233,13 @@ include_once($tpl . "/_common/_header.tpl.php");
     }
 
     function cancel() {
+        fc.showMsgSuccess({
+            title: "取消成功",  // 标题
+            desc: "您好，您的手术预约已为您取消，如有需要，请您重新选择合适日期进行预约。",   // 描述
+            delay: 0,   // 延时关闭，单位ms
+            z_index: 2, // z-index，
+        });
+        return false;
         $.showLoading('正在取消');
         $.ajax({
             "type": "post",
@@ -227,7 +250,10 @@ include_once($tpl . "/_common/_header.tpl.php");
                 $.hideLoading();
                 if (response.errno === "0") {
                     fc.showMsgSuccess({
-                        title: '取消成功'
+                        title: "取消成功",  // 标题
+                        desc: "您好，您的手术预约已为您取消，如有需要，请您重新选择合适日期进行预约。",   // 描述
+                        delay: 0,   // 延时关闭，单位ms
+                        z_index: 2, // z-index，
                     });
                 } else {
                     $.alert(response.errmsg);

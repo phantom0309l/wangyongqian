@@ -94,4 +94,22 @@ class OrderDao extends Dao
         return Dao::queryValue($sql, $bind);
     }
 
+    // 名称: getCntByScheduleidDoctorid
+    // 备注: 获取已约出去数目
+    public static function getTotalCntByScheduleidDoctorid($scheduleid, $doctorid, $yuyue_platform = 'fangcun') {
+        $sql = "select count(*)
+                from orders
+                where scheduleid = :scheduleid 
+                and doctorid = :doctorid
+                and yuyue_platform = :yuyue_platform
+                and patientid > 0 ";
+
+        $bind = array(
+            ":scheduleid" => $scheduleid,
+            ":doctorid" => $doctorid,
+            ":yuyue_platform" => $yuyue_platform);
+
+        return Dao::queryValue($sql, $bind);
+    }
+
 }

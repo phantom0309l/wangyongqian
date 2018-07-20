@@ -136,11 +136,11 @@ class Schedule extends Entity
     }
 
     public function getValidCnt() {
-        return 0;
+        return OrderDao::getCntByScheduleidDoctorid($this->id, $this->doctorid);
     }
 
     public function getTotalCnt() {
-        return 0;
+        return OrderDao::getTotalCntByScheduleidDoctorid($this->id, $this->doctorid);
     }
 
     public function getDowStr() {

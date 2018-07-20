@@ -143,7 +143,7 @@ var fc = {
             delay: 0,   // 延时关闭，单位ms
             z_index: 2, // z-index，
             container: null // 目标容器，默认为body
-        }
+        };
 
         var options = $.extend({}, defaults, parameter);
 
