@@ -75,7 +75,9 @@ class Send_order_confirm extends CronBase
                     continue;
                 }
                 $content = "【王永前工作室】您预约的王永前主任{$day}门诊手术，现跟您核对是否能够如期前来，请点击{$short_url}进行确认";
-                ShortMsg::sendManDaoTemplateSMS_j4now($mobile, $content);
+                $result = ShortMsg::sendManDaoTemplateSMS_j4now($mobile, $content);
+                var_dump($result);
+                $logcontent .= ", " .$result;
                 $logcontent .= ", " . $content;
 
                 $order->is_send_confirm = 1;

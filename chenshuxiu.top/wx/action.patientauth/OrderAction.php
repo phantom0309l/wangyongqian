@@ -251,6 +251,7 @@ class OrderAction extends PatientAuthBaseAction
             $order->isclosed = 1;
 
             $order->status = 0;
+            $order->closeby = 'Patient';
         }
 
         return self::TEXTJSON;

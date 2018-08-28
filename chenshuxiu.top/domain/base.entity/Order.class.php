@@ -167,7 +167,7 @@ class Order extends Entity
         $this->status = 1;
         $this->isclosed = 0;
 
-        $content = "您的手术预约医生已审核通过，我们将在术前1周再次短信和您确认是否可如期手术，请留意信息";
+        $content = "【王永前工作室】您的手术预约医生已审核通过，我们将在术前1周再次短信和您确认是否可如期手术，请留意信息";
         ShortMsg::sendManDaoTemplateSMS_j4now($this->patient->mobile, $content);
     }
 
@@ -229,6 +229,10 @@ class Order extends Entity
         }
 
         if ($status == 0 && $isclosed == 1) {
+            if ($patient_confirm_status == 2) {
+                return "患者不能如约就诊";
+            }
+
             if ($this->closeby == 'Patient') {
                 return "患者取消";
             } elseif ($this->closeby == 'Auditor') {
@@ -244,7 +248,7 @@ class Order extends Entity
         if ($patient_confirm_status == 0) {
             if (!$this->isStepConfirm()) {
                 $d = date('Y-m-d', strtotime('-7 day', strtotime($this->thedate)));
-                return "审核通过，{$d}进行最后确认";
+                return "审核通过，{$d}进行短信确认";
             }
             return "等待患者确认";
         }
@@ -253,9 +257,6 @@ class Order extends Entity
             return "患者确认如约就诊";
         }
 
-        if ($patient_confirm_status == 2) {
-            return "患者不能如约就诊";
-        }
 
         if ($this->thedate >= date('Y-m-d')) {
             return "进行中";

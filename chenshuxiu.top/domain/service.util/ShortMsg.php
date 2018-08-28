@@ -45,7 +45,6 @@ class ShortMsg extends MsgBase
         $url = "http://sdk.entinfo.cn:8061/webservice.asmx/mdsmssend";
 
         $result = FUtil::curlPost($url, http_build_query($data), 5);
-        var_dump($result);
 
         $result = str_replace("<?xml version=\"1.0\" encoding=\"utf-8\"?>", "", $result);
         $result = str_replace("<string xmlns=\"http://tempuri.org/\">", "", $result);

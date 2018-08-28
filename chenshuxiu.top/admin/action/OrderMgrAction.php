@@ -47,8 +47,11 @@ class OrderMgrAction extends AdminBaseAction
         $name = XRequest::getValue('name');
         $mobile = XRequest::getValue('mobile');
         $birthday = XRequest::getValue('birthday');
-        $start_date = XRequest::getValue('start_date');
-        $end_date = XRequest::getValue('end_date');
+        $dates = XRequest::getValue('dates', []);
+        if (!empty($dates)) {
+            $start_date = $dates[0];
+            $end_date = $dates[1];
+        }
 
         $cond = "";
         $bind = [];
@@ -132,7 +135,7 @@ class OrderMgrAction extends AdminBaseAction
             $this->returnError('预约不存在');
         }
 
-        if ($status == 1) {
+        if ($status == 1 && $order->auditstatus != 1) {
             $order->pass($remark);
         } elseif ($status == 2) {
             $order->refuse($remark);

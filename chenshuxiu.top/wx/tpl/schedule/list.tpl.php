@@ -275,7 +275,7 @@ include_once($tpl . "/_common/_header.tpl.php"); ?>
                     if ($doctor->bulletin) {
                         echo $doctor->bulletin;
                     } else {
-                        echo $doctor->name . '医生门诊需要提前预约, 复诊前1天会告知您就诊流程及注意事项，注意微信通知。';
+                        echo $doctor->name . '王永前医生门诊手术需要提前预约, 预约日期前1周会跟您短信核对是否能如期手术及注意事项，请您留意短信通知。';
                     }
                     ?>
                 </p>

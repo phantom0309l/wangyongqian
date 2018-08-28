@@ -86,12 +86,12 @@ include_once($tpl . "/_common/_header.tpl.php");
                         <?= $mypatient->mobile ?>
                     </div>
                 </div>
-                <div class="weui-cell">
-                    <div class="weui-cell__hd"><label class="weui-label">邮箱</label></div>
-                    <div class="weui-cell__bd">
-                        <?= $mypatient->email ?>
-                    </div>
-                </div>
+<!--                <div class="weui-cell">-->
+<!--                    <div class="weui-cell__hd"><label class="weui-label">邮箱</label></div>-->
+<!--                    <div class="weui-cell__bd">-->
+<!--                        --><?//= $mypatient->email ?>
+<!--                    </div>-->
+<!--                </div>-->
             </div>
 
             <div class="weui-cells__title">拟行手术方式</div>
